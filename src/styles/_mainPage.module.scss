@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100&display=swap');
+
+.textFont{
+  color: #FFF;
+  font-family: Montserrat Alternates, sans-serif;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.btnBrown{
+  @extend .textFont;
+  display: flex;
+  width: 280px;
+  height: 78px;
+  padding: 18.571px 37.142px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #854621;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 23px;
+  border: none;
+  &:active {
+    cursor: pointer;
+    background: #754621;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btnLightBrown{
+  @extend .btnBrown;
+  background: #CF8E55;
+}
