@@ -4,7 +4,7 @@ import {photoSliderList} from "../../const";
 import styles from './PhotoSlider.module.scss';
 import CustomButton from "../ui/CustomButton";
 
-const PhotoSlider = () => {
+const PhotoSlider: React.FC = () => {
     return (
         <div className={styles.mainBlock}>
             <Carousel autoplay>

@@ -1,0 +1,44 @@
+@import "../../styles/textFont.module";
+
+.blockAbout{
+  display: flex;
+  flex-direction: column;
+  gap: 73px;
+  width: 1587px;
+  height: 573px;
+}
+
+.blockAboutHeading{
+  @extend .textFont;
+  color: #000;
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.blockAboutContent{
+  display: flex;
+  flex-direction: row;
+  gap: 52px;
+}
+
+.blockAboutText{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.textAbout{
+  @extend .textFont;
+  color: #000;
+  font-size: 32px;
+  font-weight: 600;
+  width: 1135px;
+}
+
+.statisticTitle{
+  @extend .textFont;
+  color: #000;
+  font-size: 32px;
+  font-weight: 700;
+  text-align: center;
+}
