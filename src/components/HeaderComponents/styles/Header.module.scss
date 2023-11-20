@@ -1,0 +1,28 @@
+@import "../../../styles/variable";
+@import "../../../styles/buttonBrown.module";
+
+.header {
+  width: 1900px;
+  box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 32px 32px;
+  background-color: $color-brown;
+
+  .container {
+    margin: 0 auto;
+    padding: 15px 60px;
+
+    .text {
+      @extend .textFont;
+      font: {
+        size: 20px;
+        weight: 900;
+      };
+    }
+  }
+
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

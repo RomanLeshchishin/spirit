@@ -1,11 +1,16 @@
-import './App.css'
+import './App.module.scss';
+import './styles/variable.scss';
 import PhotoSlider from "./components/PhotoSlider/PhotoSlider";
 import SiteStatistic from "./components/SiteStatistic/SiteStatistic";
+import Header from "./components/HeaderComponents/Header.tsx";
+
+import styles from "./App.module.scss";
 
 function App() {
   return (
     <>
-        <div style={{display: "flex", alignItems: "center", justifyContent: "center", flexDirection: "column", gap: "20px"}}>
+        <div className={styles.container}>
+            <Header />
             <PhotoSlider/>
             <SiteStatistic/>
         </div>
