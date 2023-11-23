@@ -1,10 +1,8 @@
-import './App.module.scss';
-import './styles/variable.scss';
 import PhotoSlider from "./components/PhotoSlider/PhotoSlider";
 import SiteStatistic from "./components/SiteStatistic/SiteStatistic";
 import Header from "./components/HeaderComponents/Header.tsx";
-
 import styles from "./App.module.scss";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -13,6 +11,7 @@ function App() {
             <Header />
             <PhotoSlider/>
             <SiteStatistic/>
+            <Footer/>
         </div>
     </>
   )

@@ -1,0 +1,27 @@
+@import "../../styles/textFont.module";
+@import "../../styles/icon.module";
+
+.contact{
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  width: 769px;
+}
+
+.contactContent{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.contactText{
+  @extend .textFont;
+  font-weight: 600;
+  font-size: 48px;
+}
+
+.contactNumber{
+  @extend .contactText;
+  font-size: 32px;
+  width: 487px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import styles from "./styles/Header.module.scss"
 import Logo from "../LogoComponent/Logo.tsx";
 

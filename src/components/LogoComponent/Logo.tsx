@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import logo from "../../../public/img/logo.png";
 import logoMin from "../../../public/img/logoMin.png";
 
