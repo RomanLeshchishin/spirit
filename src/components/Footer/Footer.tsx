@@ -3,12 +3,13 @@ import styles from './Footer.module.scss';
 import Contact from "../Contact/Contact";
 import {EnvironmentOutlined, FieldTimeOutlined, MailOutlined, PhoneOutlined} from "@ant-design/icons";
 import SocialMedia from "../SocialMedia/SocialMedia";
+import LogoFooter from "../LogoFooter/LogoFooter";
 
 const Footer = () => {
     return (
         <div className={styles.contactsBlockColumn}>
-            <div className={styles.contactsBlockRow} style={{gap:"859px"}}>
-                <div style={{width:"488px", textAlign: "center"}}>Spirit</div>
+            <div className={styles.contactsBlockRow} style={{gap:"600px"}}>
+                <LogoFooter/>
                 <SocialMedia/>
             </div>
             <div className={styles.contactsBlockRow}>

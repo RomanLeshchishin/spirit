@@ -1,16 +1,17 @@
 import * as React from 'react';
-import {InstagramFilled} from "@ant-design/icons";
-import vk from '../../../public/img/vk.svg'
-import tikTok from '../../../public/img/tikTok.svg'
+import instagram from '../../../public/img/instagram.svg';
+import vk from '../../../public/img/vk.png';
+import tikTok from '../../../public/img/tikTok.png';
+import styles from './SocialMedia.module.scss';
 
 const SocialMedia = () => {
     return (
-        <div style={{width: "488px", textAlign: "center"}}>
-            <div>Мы в соцсетях:</div>
-            <div>
-                <InstagramFilled />
-                <img src={vk} alt={"vk"}/>
-                <img src={tikTok} alt={"TikTok"}/>
+        <div className={styles.socialContent}>
+            <div className={styles.socialLabel}>Мы в соцсетях:</div>
+            <div className={styles.socialImgContent}>
+                <img src={instagram} alt={"instagram"} className={styles.socialImg}/>
+                <img src={vk} alt={"instagram"} className={styles.socialImg}/>
+                <img src={tikTok} alt={"TikTok"} className={styles.socialImgTk}/>
             </div>
         </div>
     );
