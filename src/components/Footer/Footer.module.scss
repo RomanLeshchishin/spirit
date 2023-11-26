@@ -5,11 +5,20 @@
   flex-direction: column;
   gap: 90px;
   width: 100%;
+  padding-top: 57px;
+  padding-bottom: 144px;
   background-color: #383230;
 }
 
 .contactsBlockRow{
   display: flex;
   flex-direction: row;
-  gap: 480px;
+  padding-left: 143px;
+  padding-right: 143px;
+  gap: 143px;
+}
+
+.contactsBlockRowLogo{
+  @extend .contactsBlockRow;
+  gap: 485px;
 }
