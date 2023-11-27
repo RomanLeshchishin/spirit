@@ -18,11 +18,11 @@
 .contactText{
   @extend .textFont;
   font-weight: 600;
-  font-size: 48px;
+  font-size: 38px;
 }
 
 .contactNumber{
   @extend .contactText;
-  font-size: 32px;
+  font-size: 30px;
   width: 487px;
 }

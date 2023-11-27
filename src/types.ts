@@ -1,11 +1,11 @@
-export type photoSlide = {
+export interface photoSlide{
     src: string,
     heading: string,
     description: string,
     buttonText: string
 }
 
-export type Photo = {
+export interface Photo{
     id: number,
     imageUrl: string,
     name: string,
