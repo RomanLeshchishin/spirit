@@ -5,6 +5,9 @@ import SiteStatistic from "./components/SiteStatistic/SiteStatistic";
 import Header from "./components/HeaderComponents/Header.tsx";
 
 import styles from "./App.module.scss";
+import OurAdvantages from "./components/IconComponents/OurAdvantages.tsx";
+import HowSignUp from "./components/IconComponents/HowSignUp.tsx";
+
 
 function App() {
   return (
@@ -13,6 +16,8 @@ function App() {
             <Header />
             <PhotoSlider/>
             <SiteStatistic/>
+            <OurAdvantages />
+            <HowSignUp />
         </div>
     </>
   )
