@@ -7,10 +7,8 @@ import OurHorsePage from "./components/HorseComponents/OurHorsePage.tsx";
 
 import styles from "./App.module.scss";
 
-
 function App() {
   return (
-    <>
         <div className={styles.container}>
             <BrowserRouter>
                 <Routes>
@@ -19,8 +17,6 @@ function App() {
                     <Route path={'horses'} element={<OurHorsePage />} />
                 </Routes>
             </BrowserRouter>
-        </div>
-    </>
   )
 }
 

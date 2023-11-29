@@ -1,0 +1,24 @@
+@import "../../styles/icon.module";
+
+.contactsBlockColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  width: 1900px;
+  padding-top: 57px;
+  padding-bottom: 144px;
+  background-color: #383230;
+}
+
+.contactsBlockRow{
+  display: flex;
+  flex-direction: row;
+  padding-left: 140px;
+  padding-right: 140px;
+  gap: 143px;
+}
+
+.contactsBlockRowLogo{
+  @extend .contactsBlockRow;
+  gap: 610px;
+}
