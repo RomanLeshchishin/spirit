@@ -5,6 +5,7 @@ import styles from './SiteStatistic.module.scss';
 import {CSSProperties} from "react";
 import {aboutSpiritClub} from "../../const";
 import horses from '../../../public/img/about-spirit.svg';
+import TitleSection from "../TitleComponent/TitleSection.tsx";
 
 const formatter = (value: number) => <CountUp end={value} separator=""/>;
 const statisticValue: object[CSSProperties] = {
@@ -18,7 +19,7 @@ const statisticValue: object[CSSProperties] = {
 }
 const SiteStatistic: React.FC = () => (
     <div className={styles.blockAbout}>
-        <div className={styles.blockAboutHeading}>О КК “Spirit”</div>
+        <TitleSection textTitle={"О КК “Spirit”"} colorTitle={'black'} />
         <div className={styles.blockAboutContent}>
             <img src={horses} alt={"horses"}/>
             <div className={styles.blockAboutText}>
