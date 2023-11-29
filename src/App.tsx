@@ -1,23 +1,22 @@
 import './App.module.scss';
 import './styles/variable.scss';
-import PhotoSlider from "./components/PhotoSlider/PhotoSlider";
-import SiteStatistic from "./components/SiteStatistic/SiteStatistic";
-import Header from "./components/HeaderComponents/Header.tsx";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import CommentPage from "./components/CommentComponent/CommentPage.tsx";
+import MainPage from "./components/MainComponents/MainPage.tsx";
 
 import styles from "./App.module.scss";
-import OurAdvantages from "./components/IconComponents/OurAdvantages.tsx";
-import HowSignUp from "./components/IconComponents/HowSignUp.tsx";
 
 
 function App() {
   return (
     <>
         <div className={styles.container}>
-            <Header />
-            <PhotoSlider/>
-            <SiteStatistic/>
-            <OurAdvantages />
-            <HowSignUp />
+            <BrowserRouter>
+                <Routes>
+                    <Route path={'comments'} element={<CommentPage />} />
+                    <Route path={'/'} element={<MainPage />} />
+                </Routes>
+            </BrowserRouter>
         </div>
     </>
   )

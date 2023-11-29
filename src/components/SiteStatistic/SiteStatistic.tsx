@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 import { Col, Row, Statistic } from 'antd';
 import styles from './SiteStatistic.module.scss';
 import {CSSProperties} from "react";
-import {aboutSpiritClub} from "../../const";
+import {aboutSpiritClub} from "../../../constants/const.ts";
 import horses from '../../../public/img/about-spirit.svg';
 import TitleSection from "../TitleComponent/TitleSection.tsx";
 

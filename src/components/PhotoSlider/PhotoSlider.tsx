@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {Carousel} from "antd";
-import {photoSliderList} from "../../const";
+import {photoSliderList} from "../../../constants/const.ts";
 import styles from './PhotoSlider.module.scss';
 import CustomButton from "../ui/CustomButton";
 

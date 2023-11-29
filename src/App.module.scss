@@ -6,6 +6,11 @@
 /*    font-weight: 500;*/
 /*    line-height: normal;*/
 /*}*/
+@import "styles/variable";
+
+body {
+  background-color: $color-body;
+}
 
 .container {
   display: flex;
