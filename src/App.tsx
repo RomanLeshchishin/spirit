@@ -6,10 +6,8 @@ import MainPage from "./components/MainComponents/MainPage.tsx";
 
 import styles from "./App.module.scss";
 
-
 function App() {
   return (
-    <>
         <div className={styles.container}>
             <BrowserRouter>
                 <Routes>
@@ -18,7 +16,6 @@ function App() {
                 </Routes>
             </BrowserRouter>
         </div>
-    </>
   )
 }
 
