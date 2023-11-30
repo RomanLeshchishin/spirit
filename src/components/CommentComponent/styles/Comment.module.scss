@@ -1,0 +1,66 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.container {
+  display: flex;
+  margin-top: 65px;
+  padding: 31px 232px 29px 35px;
+  background-color: $color-sand;
+  border-radius: 32px;
+
+  .avatar {
+    border-radius: 100px;
+  }
+
+  .infComment {
+    margin-left: 54px;
+
+    .user {
+      margin: 0;
+      @extend .textFont;
+      font: {
+        size: 36px;
+        weight: 900;
+      };
+
+    }
+
+    .dataTimeCom {
+      display: flex;
+      margin-top: 10px;
+
+      .data {
+        margin: 0;
+        @extend .textFont;
+        font: {
+          size: 16px;
+          weight: 500;
+        };
+        color: $color-white;
+      }
+
+      .time {
+        margin: 0;
+        margin-left: 34px;
+        @extend .textFont;
+        font: {
+          size: 16px;
+          weight: 500;
+        };
+        color: $color-white;
+      }
+    }
+
+    .comment {
+      margin: 0;
+      margin-top: 15px;
+      width: 842px;
+      @extend .textFont;
+      font: {
+        size: 24px;
+        weight: 600;
+      };
+      color: $color-white;
+    }
+  }
+}

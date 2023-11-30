@@ -1,4 +1,4 @@
-import {photoSlide} from "./types";
+import {photoSlide} from "../src/types";
 
 export const photoSliderList: photoSlide[] = [
     {

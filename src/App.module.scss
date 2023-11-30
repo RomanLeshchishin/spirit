@@ -1,3 +1,17 @@
+/*.ant-statistic-title{*/
+/*    color: #000 !important;*/
+/*    font-family: Montserrat Alternates, sans-serif;*/
+/*    font-size: 32px;*/
+/*    font-style: normal;*/
+/*    font-weight: 500;*/
+/*    line-height: normal;*/
+/*}*/
+@import "styles/variable";
+
+body {
+  background-color: $color-body;
+}
+
 .container {
   display: flex;
   align-items: center;
