@@ -5,6 +5,7 @@ import CommentPage from "./components/CommentComponent/CommentPage.tsx";
 import MainPage from "./components/MainComponents/MainPage.tsx";
 import OurHorsePage from "./components/HorseComponents/OurHorsePage.tsx";
 import styles from "./App.module.scss";
+import OurCoachesPage from "./components/CoacheComponents/OurCoachesPage.tsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
                     <Route path={'comments'} element={<CommentPage />} />
                     <Route path={'/'} element={<MainPage />} />
                     <Route path={'horses'} element={<OurHorsePage />} />
+                    <Route path={'coaches'} element={<OurCoachesPage />} />
                 </Routes>
             </BrowserRouter>
         </div>
