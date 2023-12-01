@@ -3,6 +3,7 @@ import PhotoSlider from "../PhotoSlider/PhotoSlider.tsx";
 import SiteStatistic from "../SiteStatistic/SiteStatistic.tsx";
 import OurAdvantages from "../IconComponents/OurAdvantages.tsx";
 import HowSignUp from "../IconComponents/HowSignUp.tsx";
+import Footer from "../Footer/Footer.tsx";
 
 import styles from "./styles/MainPage.module.scss";
 
@@ -10,11 +11,12 @@ function MainPage() {
     return (
         <>
             <div className={styles.container}>
-                <Header />
+                <Header/>
                 <PhotoSlider/>
                 <SiteStatistic/>
-                <OurAdvantages />
-                <HowSignUp />
+                <OurAdvantages/>
+                <HowSignUp/>
+                <Footer/>
             </div>
         </>
     )

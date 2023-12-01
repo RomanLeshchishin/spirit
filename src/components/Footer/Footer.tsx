@@ -8,7 +8,7 @@ import MapComponent from "../Map/MapComponent.tsx";
 
 const Footer = () => {
     return (
-        <div>
+        <div className={styles.footer}>
             <MapComponent/>
             <div className={styles.contactsBlockColumn}>
                 <div className={styles.contactsBlockRowLogo}>

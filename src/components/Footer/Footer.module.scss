@@ -1,20 +1,27 @@
 @import "../../styles/icon.module";
 
+.footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #383230;
+}
+
 .contactsBlockColumn{
   display: flex;
   flex-direction: column;
   gap: 90px;
-  width: 1900px;
   padding-top: 57px;
   padding-bottom: 144px;
-  background-color: #383230;
 }
 
 .contactsBlockRow{
   display: flex;
   flex-direction: row;
-  padding-left: 140px;
-  padding-right: 140px;
+  padding-left: 85px;
+  padding-right: 85px;
   gap: 143px;
 }
 
