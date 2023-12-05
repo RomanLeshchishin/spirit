@@ -1,12 +1,10 @@
 import React from "react";
 import Comment from "./Comment.tsx";
 import '../../../public/img/avatar-1.png'
-import Header from "../HeaderComponents/Header.tsx";
 
 const CommentPage = () => {
     return (
         <>
-            <Header />
             <Comment
                 src={'../../../public/img/avatar-1.png'}
                 alt={'Avatar'}

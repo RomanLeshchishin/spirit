@@ -1,13 +1,11 @@
 import React from "react";
 import HorseCard from "./HorseCard.tsx";
-import Header from "../HeaderComponents/Header.tsx";
 
 import styles from "./styles/OurHorsePage.module.scss"
 
 const OurHorsePage = () => {
     return (
         <>
-            <Header />
             <div className={styles.horseCardContainer}>
                 <HorseCard
                     src={'../../../public/img/horse-1.png'}
