@@ -5,8 +5,10 @@ import OurAdvantages from "../IconComponents/OurAdvantages.tsx";
 import HowSignUp from "../IconComponents/HowSignUp.tsx";
 import Footer from "../Footer/Footer.tsx";
 import AnswerCollapse from "../AnswerComponent/AnswerCollapse.tsx";
+import AboutUs from "../AboutUsComponent/AboutUs.tsx";
 
 import styles from "./styles/MainPage.module.scss";
+
 
 
 function MainPage() {
@@ -15,6 +17,7 @@ function MainPage() {
             <div className={styles.container}>
                 <Header/>
                 <PhotoSlider/>
+                <AboutUs/>
                 <OurAdvantages/>
                 <AnswerCollapse/>
                 <SiteStatistic/>

@@ -1,0 +1,8 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.textContent{
+  @extend .textFont;
+  font-size: 32px;
+  font-weight: 600;
+}

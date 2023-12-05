@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles/CoachCard.module.scss';
 
 export interface CoachCardProps{
-    even: boolean,
+    even?: boolean,
     name: string,
     src: string,
     alt?: string,
