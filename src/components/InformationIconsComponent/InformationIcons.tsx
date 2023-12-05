@@ -14,13 +14,13 @@ const InformationIcons = ( { icon, name, description } : InformationIconsProps )
         <>
             {description ? (
                 <div className={styles.iconContent}>
-                    <Icon component={icon as React.ForwardRefExoticComponent<any>} className={styles.iconDescr} />
+                    <Icon component={icon as React.ForwardRefExoticComponent<any>} className='iconDescr' />
                     <p className={styles.titleDescr}>{name}</p>
                     <p className={styles.description}>{description}</p>
                 </div>
             ) : (
                 <div className={styles.iconContainer}>
-                    <Icon component={icon as React.ForwardRefExoticComponent<any>} className={styles.icon} />
+                    <Icon component={icon as React.ForwardRefExoticComponent<any>} className='icon' />
                     <p className={styles.title}>{name}</p>
                 </div>
             )}

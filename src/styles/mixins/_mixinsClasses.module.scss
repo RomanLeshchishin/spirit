@@ -1,0 +1,54 @@
+@import "../variable";
+
+@mixin textPlaceholderColor {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $color-white;
+    opacity: 1;
+  }
+
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: $color-white;
+  }
+
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: $color-white;
+  }
+}
+
+@mixin inputsForms {
+  margin: 0;
+  margin-bottom: 15px;
+  height: 60px;
+  width: 553px;
+  border-radius: 100px;
+}
+
+@mixin textAreasForms {
+  width: 553px;
+  border-radius: 32px;
+}
+
+@mixin buttonResetStyles {
+  @extend .textFont;
+  display: block;
+  margin: {
+    left: auto;
+    right: auto;
+  };
+  padding: 18px 70px;
+  border: none;
+  font: inherit;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@mixin colorInputFormSignUp {
+  background-color: $color-brown;
+  border: 1px solid $color-brown;
+}
+
+@mixin colorInputFormQuestions {
+  background-color: $color-black-30;
+  color: $color-white;
+  border: 1px solid $color-black-30;
+}
