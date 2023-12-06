@@ -8,6 +8,7 @@ import AnswerCollapse from "../AnswerComponent/AnswerCollapse.tsx";
 import AboutUs from "../AboutUsComponent/AboutUs.tsx";
 
 import styles from "./styles/MainPage.module.scss";
+import FormCustom from "../FormComponent/Form.tsx";
 
 
 
@@ -18,11 +19,19 @@ function MainPage() {
                 <Header/>
                 <PhotoSlider/>
                 <AboutUs/>
-                <OurAdvantages/>
+                <OurAdvantages />
                 <AnswerCollapse/>
                 <SiteStatistic/>
-                <HowSignUp/>
-                <Footer map={true}/>
+                <HowSignUp />
+                <FormCustom
+                    namePlaceholder={'Введите ваше Ф.И.О.'}
+                    phonePlaceholder={'Введите ваш телефон'}
+                    emailPlaceholder={'Введите ваше e-mail'}
+                    textAreaPlaceholder={'Введите ваш вопрос'}
+                    heightTextArea={11}
+                    buttonPlaceholder={'Записаться'}
+                />
+                <Footer map={true}/>v
             </div>
         </>
     )

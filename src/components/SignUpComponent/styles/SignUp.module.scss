@@ -1,0 +1,15 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.title {
+  margin-top: 37px;
+  margin-left: 90px;
+}
+
+.formContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
