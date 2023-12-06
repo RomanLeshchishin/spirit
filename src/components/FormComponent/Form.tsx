@@ -12,7 +12,7 @@ interface FormProps {
     emailPlaceholder: string,
     textAreaPlaceholder: string,
     heightTextArea: number,
-    buttonPlaceholder: string,
+    buttonPlaceholder?: string,
     numPeoplePlaceholder?: string,
     selectPlaceholder?: string,
     optionsSelect?: any,

@@ -1,0 +1,16 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.containerComment {
+  width: 1313px;
+}
+
+.btnAddComment {
+  @include buttonResetStyles;
+  margin-top: 40px;
+  background-color: $color-sand;
+  font: {
+    weight: 700;
+    size: 20px;
+  };
+}
