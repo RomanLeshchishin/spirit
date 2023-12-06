@@ -31,7 +31,7 @@ function MainPage() {
                     heightTextArea={11}
                     buttonPlaceholder={'Записаться'}
                 />
-                <Footer map={true}/>v
+                <Footer map={true}/>
             </div>
         </>
     )
