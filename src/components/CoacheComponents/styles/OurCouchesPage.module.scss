@@ -1,0 +1,11 @@
+.couchCardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.couchCardContainer:last-child {
+  margin-bottom: 50px;
+}
