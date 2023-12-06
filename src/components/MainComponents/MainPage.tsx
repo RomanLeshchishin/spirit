@@ -5,9 +5,14 @@ import OurAdvantages from "../IconComponents/OurAdvantages.tsx";
 import HowSignUp from "../IconComponents/HowSignUp.tsx";
 import FormCustom from "../FormComponent/Form.tsx";
 import ActiveLeisure from "../ActiveLeisureComponents/ActiveLeisure.tsx";
+import Footer from "../Footer/Footer.tsx";
+import AnswerCollapse from "../AnswerComponent/AnswerCollapse.tsx";
+import AboutUs from "../AboutUsComponent/AboutUs.tsx";
 
 import styles from "./styles/MainPage.module.scss";
 import MenuCustom from "../MenuComponents/Menu.tsx";
+
+
 
 function MainPage() {
     return (
@@ -17,8 +22,10 @@ function MainPage() {
                 <div className={styles.content}>
                     <Header />
                     <PhotoSlider/>
+                    <AboutUs/>
                     <ActiveLeisure />
                     <OurAdvantages />
+                    <AnswerCollapse/>
                     <SiteStatistic/>
                     <HowSignUp />
                     <FormCustom
@@ -29,6 +36,7 @@ function MainPage() {
                         heightTextArea={11}
                         buttonPlaceholder={'Записаться'}
                     />
+                    <Footer map={true}/>
                 </div>
             </div>
         </>
