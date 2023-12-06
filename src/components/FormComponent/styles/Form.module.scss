@@ -38,6 +38,7 @@
       .btnForm1 {
         @extend .textFont;
         @include buttonResetStyles;
+        font: inherit;
         color: $color-white;
         background-color: $color-sand;
       }
@@ -86,6 +87,7 @@
       .btnForm2 {
         margin-top: 45px;
         @include buttonResetStyles;
+        font: inherit;
         background-color: $color-beige;
         color: $color-black;
       }

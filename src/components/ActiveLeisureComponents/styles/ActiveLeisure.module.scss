@@ -1,0 +1,29 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.container {
+  margin-top: 100px;
+  background-color: $color-black-30;
+  border-radius: 32px;
+  padding: 80px 96px;
+
+  .activeCardContainer {
+    display: flex;
+
+    .activeCard {
+      margin-left: 150px;
+    }
+  }
+
+  .btnActive {
+    @include buttonResetStyles;
+    margin-top: 139px;
+    padding: 20px 60px;
+    border-radius: 16px;
+    background-color: $color-orange-55;
+    font: {
+      weight: 700;
+      size: 23px;
+    };
+  }
+}
