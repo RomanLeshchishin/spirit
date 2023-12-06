@@ -1,0 +1,46 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.cardContent {
+  display: flex;
+  flex-direction: row;
+  gap: 61px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 1495px;
+  height: 432px;
+  border-radius: 32px;
+  background: $color-brown;
+
+  .cardContentImage{
+    width: 350px;
+    height: 350px;
+    border-radius: 32px;
+  }
+
+  .cardContentText {
+    display: flex;
+    flex-direction: column;
+    gap: 33px;
+
+    .nameText {
+      @extend .textFont;
+      font-size: 50px;
+      line-height: 22px;
+    }
+
+    .educationText{
+      @extend .textFont;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22px;
+    }
+
+    .descriptionText{
+      @extend .educationText;
+      font-size: 20px;
+    }
+  }
+}
