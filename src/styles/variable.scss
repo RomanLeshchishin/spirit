@@ -72,3 +72,19 @@ $color-beige: #E0D0C7;
 .ant-picker {
   color: $color-white;
 }
+
+.ant-menu {
+  background-color: $color-beige;
+}
+
+.ant-menu-item.ant-menu-item-active.ant-menu-item-selected {
+  background-color: #BFAEA4;
+  box-shadow: -3px 0px 0px 0px #854621 inset;
+  color: #854621;
+}
+
+.ant-menu-item.ant-menu-item-selected {
+  background-color: #BFAEA4;
+  box-shadow: -3px 0px 0px 0px #854621 inset;
+  color: #854621;
+}

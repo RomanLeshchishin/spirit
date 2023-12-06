@@ -3,8 +3,16 @@
 
 .container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: space-between;
+  height: 100%;
+
+  .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    gap: 20px;
+  }
 }

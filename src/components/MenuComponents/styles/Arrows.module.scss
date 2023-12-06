@@ -1,0 +1,8 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.circle {
+  border-radius: 1000px;
+  border: 1px solid #E5E5E5;
+  background: #FFF;
+}

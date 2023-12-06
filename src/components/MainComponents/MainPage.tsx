@@ -7,25 +7,29 @@ import FormCustom from "../FormComponent/Form.tsx";
 import ActiveLeisure from "../ActiveLeisureComponents/ActiveLeisure.tsx";
 
 import styles from "./styles/MainPage.module.scss";
+import MenuCustom from "../MenuComponents/Menu.tsx";
 
 function MainPage() {
     return (
         <>
             <div className={styles.container}>
-                <Header />
-                <PhotoSlider/>
-                <ActiveLeisure />
-                <OurAdvantages />
-                <SiteStatistic/>
-                <HowSignUp />
-                <FormCustom
-                    namePlaceholder={'Введите ваше Ф.И.О.'}
-                    phonePlaceholder={'Введите ваш телефон'}
-                    emailPlaceholder={'Введите ваше e-mail'}
-                    textAreaPlaceholder={'Введите ваш вопрос'}
-                    heightTextArea={11}
-                    buttonPlaceholder={'Записаться'}
-                />
+                <MenuCustom />
+                <div className={styles.content}>
+                    <Header />
+                    <PhotoSlider/>
+                    <ActiveLeisure />
+                    <OurAdvantages />
+                    <SiteStatistic/>
+                    <HowSignUp />
+                    <FormCustom
+                        namePlaceholder={'Введите ваше Ф.И.О.'}
+                        phonePlaceholder={'Введите ваш телефон'}
+                        emailPlaceholder={'Введите ваше e-mail'}
+                        textAreaPlaceholder={'Введите ваш вопрос'}
+                        heightTextArea={11}
+                        buttonPlaceholder={'Записаться'}
+                    />
+                </div>
             </div>
         </>
     )

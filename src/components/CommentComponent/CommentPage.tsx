@@ -55,7 +55,6 @@ const CommentPage = () => {
                 textBtn2={"Отправить"}
                 onClick1={closeModal}
                 onClick2={closeModal}
-                stylesContentModal={styles.contentModal}
                 layout={layout}
             />
         </>
