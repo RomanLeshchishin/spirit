@@ -10,6 +10,7 @@ import AnswerCollapse from "../AnswerComponent/AnswerCollapse.tsx";
 import AboutUs from "../AboutUsComponent/AboutUs.tsx";
 
 import styles from "./styles/MainPage.module.scss";
+import FormCustom from "../FormComponent/Form.tsx";
 
 
 
