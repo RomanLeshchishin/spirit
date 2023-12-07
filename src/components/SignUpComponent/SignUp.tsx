@@ -3,13 +3,11 @@ import FormCustom from "../FormComponent/Form.tsx";
 
 import styles from "./styles/SignUp.module.scss"
 import TitleSection from "../TitleComponent/TitleSection.tsx";
-import Header from "../HeaderComponents/Header.tsx";
 
 const SignUp = () => {
     return (
         <>
             <div>
-                <Header />
                 <div className={styles.title}>
                     <TitleSection textTitle={'Записаться'} colorTitle={'#000'} />
                 </div>

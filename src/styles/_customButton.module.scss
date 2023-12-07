@@ -1,0 +1,29 @@
+@import 'textFont.module';
+@import "variable";
+
+.loginButton {
+  @extend .textHeading;
+  display: flex;
+  height: 52px;
+  width: 540px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  align-self: stretch;
+  border-radius: 8px;
+  background: $color-brown;
+  color: var(--white, #FFF);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+}
+
+.loginButton:active{
+  cursor: pointer;
+  background: $color-brown-onclick;
+}
+
+.loginButton:focus{
+  cursor: pointer;
+}

@@ -1,0 +1,46 @@
+@import "../../../styles/textFont.module";
+@import "../../../styles/customInput.module";
+@import "../../../styles/customButton.module";
+
+.blockLogin{
+  display: flex;
+  width: 540px;
+  padding: 48px 72px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 8px;
+  background: #FFF;
+}
+
+.blockLabel{
+  display: flex;
+  flex-direction: row;
+  gap: 394px;
+}
+
+.blockLabelBottom{
+  @extend .blockLabel;
+  gap: 8px;
+}
+
+.textForgot{
+  @extend .textFont;
+  color: #1F4AB8;
+  text-align: right;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+  border: none;
+  background-color: white;
+}
+
+.textBottomLabelLeft{
+  @extend .textFont;
+  color: var(--text-tertiary, #5A5A5D);
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+

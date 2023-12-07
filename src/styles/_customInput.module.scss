@@ -1,0 +1,44 @@
+@import "textFont.module";
+
+.inputLabel{
+  @extend .textHeading;
+  color: var(--text-secondary, #5A5A5D) !important;
+  font-size: 16px !important;
+  font-weight: 400 !important;
+  width: 100%;
+  text-align: left;
+  text-transform: capitalize;
+}
+
+.inputContent{
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 540px;
+}
+
+.inputBlock{
+  display: flex;
+  height: 32px;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+  border: 2px solid;
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.inputBlock:active{
+  border: 2px solid;
+}
+
+.inputBlock:focus{
+  border: 2px solid;
+}
+
+.inputBlock::placeholder{
+  display: flex;
+  align-items: start;
+  gap: 5px;
+  align-self: stretch;
+}

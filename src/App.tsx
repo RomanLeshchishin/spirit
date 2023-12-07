@@ -8,6 +8,8 @@ import SignUp from "./components/SignUpComponent/SignUp.tsx";
 import styles from "./App.module.scss";
 import OurCoachesPage from "./components/CoacheComponents/OurCoachesPage.tsx";
 import Layout from "./components/Layout/Layout.tsx";
+import Login from "./components/AuthorizationComponents/Login.tsx";
+import Registration from "./components/AuthorizationComponents/Registration.tsx";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
                         <Route path={'coaches'} element={<OurCoachesPage />} />
                         <Route path={'signup'} element={<SignUp />} />
                     </Route>
+                    <Route path={"/login"} element={<Login/>}/>
+                    <Route path={"/register"} element={<Registration/>}/>
                 </Routes>
             </BrowserRouter>
         </div>

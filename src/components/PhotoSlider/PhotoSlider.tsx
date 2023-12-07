@@ -2,7 +2,6 @@ import * as React from 'react';
 import {Carousel} from "antd";
 import {photoSliderList} from "../../../constants/const.ts";
 import styles from './PhotoSlider.module.scss';
-import CustomButton from "../ui/CustomButton";
 
 const PhotoSlider: React.FC = () => {
     return (
@@ -17,7 +16,7 @@ const PhotoSlider: React.FC = () => {
                                 <div className={styles.textHeading}>{photoSlide.heading}</div>
                                 <div className={styles.textDescription}>{photoSlide.description}</div>
                             </div>
-                            <CustomButton className={styles.btnBrown} text={photoSlide.buttonText}></CustomButton>
+                            <button className={styles.btnBrown}>{photoSlide.buttonText}</button>
                         </div>
                     </div>
                     )
