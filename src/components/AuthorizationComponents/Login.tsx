@@ -1,5 +1,5 @@
 import * as React from 'react';
-import styles from './Login.module.scss';
+import styles from "./styles/Authorizathion.module.scss";
 import CustomInput from "../UI/CustomInput";
 import CustomButton from "../UI/CustomButton";
 import {useNavigate} from "react-router";

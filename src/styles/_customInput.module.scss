@@ -1,7 +1,7 @@
 @import "textFont.module";
 
 .inputLabel{
-  @extend .textHeading;
+  @extend .textFont;
   color: var(--text-secondary, #5A5A5D) !important;
   font-size: 16px !important;
   font-weight: 400 !important;
