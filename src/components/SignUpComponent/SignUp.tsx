@@ -1,10 +1,13 @@
 import React from "react";
 import FormCustom from "../FormComponent/Form.tsx";
+import TitleSection from "../TitleComponent/TitleSection.tsx";
+import useStore from "../../store";
 
 import styles from "./styles/SignUp.module.scss"
-import TitleSection from "../TitleComponent/TitleSection.tsx";
+
 
 const SignUp = () => {
+    const store = useStore()
     return (
         <>
             <div>
@@ -13,9 +16,9 @@ const SignUp = () => {
                 </div>
                 <div className={styles.formContainer}>
                     <FormCustom
-                        namePlaceholder={'Введите ваше Ф.И.О.'}
-                        phonePlaceholder={'Введите ваш телефон'}
-                        emailPlaceholder={'Введите ваше e-mail'}
+                        namePlaceholder={store.authUser?.name ? `${store.authUser?.name} ${store.authUser?.surname}` : 'Введите ваше имя и фамилию'}
+                        phonePlaceholder={store.authUser?.number || 'Введите ваш телефон'}
+                        emailPlaceholder={store.authUser?.email || 'Введите ваше e-mail'}
                         numPeoplePlaceholder={'Введите количество человек'}
                         selectPlaceholder={'Выберите услугу'}
                         optionsSelect={[

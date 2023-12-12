@@ -2,18 +2,17 @@
 
 .inputLabel{
   @extend .textFont;
-  color: var(--text-secondary, #5A5A5D) !important;
+  color: black !important;
   font-size: 16px !important;
-  font-weight: 400 !important;
+  font-weight: 700 !important;
   width: 100%;
   text-align: left;
-  text-transform: capitalize;
 }
 
 .inputContent{
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 15px;
   width: 540px;
 }
 

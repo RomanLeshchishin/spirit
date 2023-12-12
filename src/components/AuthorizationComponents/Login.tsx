@@ -1,24 +1,64 @@
 import * as React from 'react';
 import styles from "./styles/Authorizathion.module.scss";
-import CustomInput from "../UI/CustomInput";
-import CustomButton from "../UI/CustomButton";
 import {useNavigate} from "react-router";
+import {useState} from "react";
+import {IUserLogin} from "../../models/IUser.ts";
+import AuthService from "../../services/authService.ts";
+import useStore from "../../store";
 
 const Login = () => {
+    const store = useStore();
     const navigate = useNavigate()
+    const [user, setUser] = useState<IUserLogin>({
+        email: '',
+        password: ''
+    })
+    const login = async (user: IUserLogin) => {
+        try {
+            store.setRequestLoading(true)
+            const response = await AuthService.loginUser(user)
+            store.setRequestLoading(false)
+            store.setAuthUser(response.data.user)
+            navigate('/signup')
+        }
+        catch (error: any){
+            store.setRequestLoading(false)
+            if (error.response){
+                if(error.response.data.errors){
+                    console.log(error.response.data.errors)
+                }
+                console.log(error.response.data.message)
+            }
+        }
+    }
+
     return (
         <div className={styles.blockLogin}>
-            <div className={styles.textHeading}>Login to your account</div>
-            <CustomInput label={"Логин"} placeholder={"Введите свою почту"}/>
-            <div className={styles.blockLabel}>
-                <div className={styles.inputLabel}>Пароль</div>
-                <a href={''} className={styles.textForgot}>Forgot？</a>
+            <div className={styles.textForgot}>Войдите в свой аккаунт</div>
+            <div className={styles.inputContent}>
+                <div className={styles.inputLabel}>Email</div>
+                <input
+                    className={styles.inputBlock}
+                    placeholder={"Введите свою почту"}
+                    type={"email"}
+                    value={user.email}
+                    onChange={(e) => setUser({...user, email: e.target.value})}
+                />
             </div>
-            <input className={styles.inputBlock} placeholder={"Введите свой пароль"}/>
-            <CustomButton classBtn={styles.loginButton} text={"Войти"}/>
+            <div className={styles.inputContent}>
+                <div className={styles.inputLabel}>Пароль</div>
+                <input
+                    className={styles.inputBlock}
+                    placeholder={"Введите свой пароль"}
+                    type={"password"}
+                    value={user.password}
+                    onChange={(e) => setUser({...user, password: e.target.value})}
+                />
+            </div>
+            <button className={styles.loginButton} onClick={() => login(user)}>Войти</button>
             <div className={styles.blockLabelBottom}>
                 <div className={styles.textBottomLabelLeft}>Нет аккаунта ?</div>
-                <a className={styles.textForgot} onClick={() => navigate("/register")} href={''}>Зарегистрироваться</a>
+                <a className={styles.textForgot} onClick={(e) => {navigate("/registration"); e.preventDefault()}} href={''}>Зарегистрироваться</a>
             </div>
         </div>
     );
