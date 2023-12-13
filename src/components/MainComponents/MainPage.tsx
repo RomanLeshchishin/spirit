@@ -12,7 +12,6 @@ import AboutUs from "./AboutUsComponent/AboutUs.tsx";
 import styles from "./MainPage.module.scss";
 
 
-
 function MainPage() {
     return (
         <>

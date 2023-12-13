@@ -2,12 +2,11 @@ import * as React from 'react';
 import {Carousel} from "antd";
 import styles from "./PhotoSliderTest.module.scss";
 import {useQuery} from "@tanstack/react-query";
-import {Photo} from "../../types";
 
 const PhotoSliderTest = () => {
 
-    async function fetchPhotos(): Promise<Photo[] | undefined>{
-        const res = await fetch('https://653e4494f52310ee6a9ac0b6.mockapi.io/photos-main-page-slider')
+    async function fetchPhotos(){
+        const res = await fetch('https://6579af271acd268f9af9bc32.mockapi.io/coaches')
         if (!res.ok) throw new Error('Failed to fetch photos!')
         return res.json()
     }
@@ -18,18 +17,16 @@ const PhotoSliderTest = () => {
    })
 
     return (
-        <div className={styles.blockSlider}>
+        <div className={styles.mainBlock}>
             <Carousel autoplay>
-                {isSuccess && data?.map((photo) =>
+                {isSuccess && data?.map((photo: any) =>
                <div>
-                   <img src={photo.imageUrl} alt={photo.name} style={{margin: "auto"}}></img>
-                   <h2>{photo.name}</h2>
+                   <img src={photo.imageUrl} alt={photo.fullName}></img>
                </div>
                     )}
             </Carousel>
         </div>
     );
 };
-//slider, statistic, footer
 
 export default PhotoSliderTest;

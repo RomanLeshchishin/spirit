@@ -16,4 +16,8 @@ export default class SignUpService{
             additional_information: signUp.additionalInformation
         })
     }
+
+    static async getSignUps(userId: string) {
+        return authApi.get(`/user/signup/${userId}`)
+    }
 }

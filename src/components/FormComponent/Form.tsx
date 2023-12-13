@@ -49,6 +49,7 @@ const FormCustom = ( { namePlaceholder, phonePlaceholder, emailPlaceholder, text
             store.setRequestLoading(true)
             const response = await SignUpService.createSignUp(userSignUp)
             store.setRequestLoading(false)
+            store.setSignUp(response.data)
             console.log(response.data)
         }
         catch (error: any){

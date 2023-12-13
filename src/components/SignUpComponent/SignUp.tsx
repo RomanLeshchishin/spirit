@@ -2,12 +2,14 @@ import React from "react";
 import FormCustom from "../FormComponent/Form.tsx";
 import TitleSection from "../TitleComponent/TitleSection.tsx";
 import useStore from "../../store";
+import {useNavigate} from "react-router";
 
 import styles from "./styles/SignUp.module.scss"
 
 
 const SignUp = () => {
     const store = useStore()
+    const navigate = useNavigate()
     return (
         <>
             <div>
@@ -48,6 +50,7 @@ const SignUp = () => {
                         buttonPlaceholder={'Записаться'}
                         bigSize={true}
                     />
+                    <button onClick={() => navigate('/profile')}>в профиль</button>
                 </div>
             </div>
         </>

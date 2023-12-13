@@ -10,6 +10,8 @@ import OurCoachesPage from "./components/CoacheComponents/OurCoachesPage.tsx";
 import Layout from "./components/UI/Layout.tsx";
 import Login from "./components/AuthorizationComponents/Login.tsx";
 import Registration from "./components/AuthorizationComponents/Registration.tsx";
+import LayoutProtect from "./components/UI/LayoutProtect.tsx";
+import Profile from "./components/ProfileComponent/Profile.tsx";
 
 function App() {
   return (
@@ -21,7 +23,10 @@ function App() {
                         <Route path={'comments'} element={<CommentPage />} />
                         <Route path={'horses'} element={<OurHorsePage />} />
                         <Route path={'coaches'} element={<OurCoachesPage />} />
+                    </Route>
+                    <Route element={<LayoutProtect/>}>
                         <Route path={'signup'} element={<SignUp />} />
+                        <Route path={'profile'} element={<Profile/>}/>
                     </Route>
                     <Route path={"/login"} element={<Login/>}/>
                     <Route path={"/registration"} element={<Registration/>}/>
