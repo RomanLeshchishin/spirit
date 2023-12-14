@@ -7,11 +7,11 @@ interface HorseCardProps {
     alt?: string,
     name: string,
     breed: string,
-    color: string,
+    suit: string,
     year: number,
 }
 
-const HorseCard = ( { src, alt, name, breed, color, year } : HorseCardProps ) => {
+const HorseCard = ( { src, alt, name, breed, suit, year } : HorseCardProps ) => {
     return (
         <>
             <div className={styles.card}>
@@ -25,7 +25,7 @@ const HorseCard = ( { src, alt, name, breed, color, year } : HorseCardProps ) =>
                         </div>
                         <div className={styles.row}>
                             <p className={styles.rowText}>Масть:</p>
-                            <p className={styles.rowInf}>{color}</p>
+                            <p className={styles.rowInf}>{suit}</p>
                         </div>
                         <div className={styles.row}>
                             <p className={styles.rowText}>Год:</p>
