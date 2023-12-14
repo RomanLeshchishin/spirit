@@ -1,10 +1,15 @@
 import React from "react";
 import FormCustom from "../FormComponent/Form.tsx";
 import TitleSection from "../TitleComponent/TitleSection.tsx";
+import useStore from "../../store";
+import {useNavigate} from "react-router";
 
 import styles from "./styles/SignUp.module.scss"
 
+
 const SignUp = () => {
+    const store = useStore()
+    const navigate = useNavigate()
     return (
         <>
             <div>
@@ -13,9 +18,9 @@ const SignUp = () => {
                 </div>
                 <div className={styles.formContainer}>
                     <FormCustom
-                        namePlaceholder={'Введите ваше Ф.И.О.'}
-                        phonePlaceholder={'Введите ваш телефон'}
-                        emailPlaceholder={'Введите ваше e-mail'}
+                        namePlaceholder={store.authUser?.name ? `${store.authUser?.name} ${store.authUser?.surname}` : 'Введите ваше имя и фамилию'}
+                        phonePlaceholder={store.authUser?.number || 'Введите ваш телефон'}
+                        emailPlaceholder={store.authUser?.email || 'Введите ваше e-mail'}
                         numPeoplePlaceholder={'Введите количество человек'}
                         selectPlaceholder={'Выберите услугу'}
                         optionsSelect={[
@@ -45,6 +50,7 @@ const SignUp = () => {
                         buttonPlaceholder={'Записаться'}
                         bigSize={true}
                     />
+                    <button onClick={() => navigate('/profile')}>в профиль</button>
                 </div>
             </div>
         </>

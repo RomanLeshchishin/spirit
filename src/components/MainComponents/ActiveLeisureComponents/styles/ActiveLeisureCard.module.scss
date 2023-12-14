@@ -1,0 +1,33 @@
+@import "../../../../styles/variable";
+@import "../../../../styles/mixins";
+
+.container {
+  text-align: center;
+
+  .image {
+    border-radius: 32px;
+  }
+
+  .title {
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+    @extend .textFont;
+    font: {
+      weight: 700;
+      size: 32px;
+    };
+  }
+
+  .btnCard {
+    @include buttonResetStyles;
+    margin-top: 40px;
+    padding: 20px 60px;
+    border-radius: 16px;
+    font: {
+      weight: 700;
+      size: 23px;
+    };
+    background-color: $color-sand;
+  }
+}
