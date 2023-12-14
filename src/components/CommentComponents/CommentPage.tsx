@@ -4,7 +4,6 @@ import Modal from "../ModalComponent/Modal.tsx";
 import FormComment from "../FormComponent/FormComment.tsx";
 
 import styles from "./styles/CommentPage.module.scss";
-import '../../../public/img/avatar-1.png'
 
 const CommentPage = () => {
     const [modalActive, setModalActive] = useState(false);
@@ -52,7 +51,6 @@ const CommentPage = () => {
                 textBtn2={"Отправить"}
                 onClick1={closeModal}
                 onClick2={closeModal}
-                stylesContentModal={styles.contentModal}
                 layout={layout}
             />
         </>

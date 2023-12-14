@@ -8,31 +8,38 @@ import ActiveLeisure from "./ActiveLeisureComponents/ActiveLeisure.tsx";
 import Footer from "../FooterComponents/Footer.tsx";
 import AnswerCollapse from "./AnswerComponent/AnswerCollapse.tsx";
 import AboutUs from "./AboutUsComponent/AboutUs.tsx";
+import MenuCustom from "../MenuComponents/Menu.tsx";
 
 import styles from "./MainPage.module.scss";
+
 
 
 function MainPage() {
     return (
         <>
             <div className={styles.container}>
-                <Header/>
-                <PhotoSlider/>
-                <AboutUs/>
-                <ActiveLeisure />
-                <OurAdvantages />
-                <AnswerCollapse/>
-                <SiteStatistic/>
-                <HowSignUp />
-                <FormCustom
-                    namePlaceholder={'Введите ваше Ф.И.О.'}
-                    phonePlaceholder={'Введите ваш телефон'}
-                    emailPlaceholder={'Введите ваше e-mail'}
-                    textAreaPlaceholder={'Введите ваш вопрос'}
-                    heightTextArea={11}
-                    buttonPlaceholder={'Задать вопрос'}
-                />
-                <Footer map={true}/>
+                <MenuCustom />
+                <div className={styles.head}>
+                    <Header />
+                    <div className={styles.content}>
+                        <PhotoSlider/>
+                        <AboutUs/>
+                        <ActiveLeisure />
+                        <OurAdvantages />
+                        <AnswerCollapse/>
+                        <SiteStatistic/>
+                        <HowSignUp />
+                        <FormCustom
+                            namePlaceholder={'Введите ваше Ф.И.О.'}
+                            phonePlaceholder={'Введите ваш телефон'}
+                            emailPlaceholder={'Введите ваше e-mail'}
+                            textAreaPlaceholder={'Введите ваш вопрос'}
+                            heightTextArea={11}
+                            buttonPlaceholder={'Записаться'}
+                        />
+                        <Footer map={true}/>
+                    </div>
+                </div>
             </div>
         </>
     )

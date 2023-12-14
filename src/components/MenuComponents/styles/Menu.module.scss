@@ -1,0 +1,28 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.layout {
+  max-height: 100%;
+
+  .sider {
+    position: relative;
+    background-color: $color-beige;
+    color: $color-beige;
+  }
+
+  .menuItem {
+    @extend .textFontColor;
+    font: {
+      weight: 700;
+      size: 16px;
+    };
+  }
+}
+
+.logo {
+  padding: 65px 31.5px 30px 25px;
+}
+
+.logoMin {
+  padding: 65px 22px 30px 22px;
+}

@@ -2,7 +2,7 @@
 @import "../../../styles/mixins";
 
 .header {
-  width: 99vw;
+  width: 2120px;
   box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 32px 32px;
   background-color: $color-brown;
@@ -12,6 +12,7 @@
 
     .text {
       @extend .textFont;
+      color: $color-white;
       font: {
         size: 20px;
         weight: 900;
