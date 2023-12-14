@@ -1,9 +1,9 @@
 import React from 'react';
-import Header from "../HeaderComponents/Header.tsx";
+import Header from "../HeaderComponent/Header.tsx";
 import {Outlet} from "react-router-dom";
-import Footer from "../Footer/Footer.tsx";
+import Footer from "../FooterComponents/Footer.tsx";
 import MenuCustom from "../MenuComponents/Menu.tsx";
-import styles from "../MainComponents/styles/MainPage.module.scss";
+import styles from "../MainComponents/MainPage.module.scss";
 
 const Layout = () => {
     return (
