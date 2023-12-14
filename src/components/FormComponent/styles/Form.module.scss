@@ -1,0 +1,96 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.containerForm1 {
+  margin: 0;
+  margin-top: 100px;
+
+  .form1 {
+    border-radius: 32px;
+    background-image: url("./img/formBackgroundMini.png");
+
+    .title1 {
+      padding: {
+        top: 43px;
+        left: 44px;
+      };
+    }
+
+    .contentForm1 {
+      padding: 0 147px 54px 147px;
+
+      .containerInputs1 {
+        display: flex;
+        @include textPlaceholderColor;
+
+        .input1 {
+          @include inputsForms;
+          @include colorInputFormQuestions;
+        }
+
+        .textArea1 {
+          @include textAreasForms;
+          @include colorInputFormQuestions;
+          margin-left: 220px;
+        }
+      }
+
+      .btnForm1 {
+        @extend .textFont;
+        @include buttonResetStyles;
+        font: inherit;
+        color: $color-white;
+        background-color: $color-sand;
+      }
+    }
+  }
+}
+
+
+.containerForm2 {
+
+  .form2 {
+    background-image: url("./img/formBackground.png");
+    border-radius: 32px;
+
+    .contentContainer {
+      padding: 68px 130px 54px 128px;
+
+      .contentForm2 {
+        display: flex;
+
+        .contentLeft {
+          @include textPlaceholderColor;
+
+          .input2 {
+            @include inputsForms;
+            @include colorInputFormSignUp;
+          }
+        }
+
+        .contentRight {
+          margin-left: 125px;
+          @include textPlaceholderColor;
+
+          .input2 {
+            @include inputsForms;
+            @include colorInputFormSignUp;
+          }
+
+          .textArea2 {
+            @include textAreasForms;
+            @include colorInputFormSignUp;
+          }
+        }
+      }
+
+      .btnForm2 {
+        margin-top: 45px;
+        @include buttonResetStyles;
+        font: inherit;
+        background-color: $color-beige;
+        color: $color-black;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.horseCardContainer {
+  display: flex;
+}
+
+.horseCardContainer:last-child {
+  margin-bottom: 50px;
+}

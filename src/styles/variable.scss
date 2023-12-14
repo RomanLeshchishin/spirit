@@ -1,0 +1,91 @@
+$color-brown: #8D6D5A;
+$color-brown-onclick: #9D6D5A;
+$color-sand: #854621;
+$color-orange: #EAAE79;
+$color-orange-55: #CF8E55;
+$color-peach: #FBCA9F;
+$color-black: #000;
+$color-black-30: #383230;
+$color-white: #fff;
+$color-body: #BFAEA4;
+$color-beige: #E0D0C7;
+
+
+.iconDescr {
+  padding: 25px;
+  color: $color-black;
+  background-color: $color-brown;
+  border-radius: 100px;
+
+  .anticon {
+    svg {
+      width: 6.875em;
+      height: 6.875em;
+    }
+  }
+}
+
+.icon {
+  padding: 25px;
+  color: $color-black-30;
+  background-color: $color-peach;
+  border-radius: 100px;
+
+  .anticon {
+    svg {
+      width: 6.875em;
+      height: 6.875em;
+    }
+  }
+}
+
+.select {
+  .ant-select-selector {
+    height: 60px !important;
+    width: 553px;
+    background-color: $color-brown !important;
+    border: 1px solid $color-brown !important;
+    border-radius: 100px;
+  }
+
+  .ant-select-arrow {
+    color: white !important;
+    margin-top: 0.7em;
+  }
+}
+
+.ant-select-selection-item {
+  color: $color-white;
+}
+
+.ant-select-item-option-content {
+  color: $color-white;
+}
+
+.anticon-calendar {
+  color: $color-white;
+}
+
+.anticon-clock-circle {
+  color: $color-white;
+}
+
+.ant-picker {
+  color: $color-white;
+}
+
+.ant-menu {
+  background-color: $color-beige;
+}
+
+.ant-menu-item.ant-menu-item-active.ant-menu-item-selected {
+  background-color: #BFAEA4;
+  box-shadow: -3px 0px 0px 0px #854621 inset;
+  color: #854621;
+}
+
+.ant-menu-item.ant-menu-item-selected {
+  background-color: #BFAEA4;
+  box-shadow: -3px 0px 0px 0px #854621 inset;
+  color: #854621;
+}

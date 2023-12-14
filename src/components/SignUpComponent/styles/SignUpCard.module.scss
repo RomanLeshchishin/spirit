@@ -1,0 +1,12 @@
+.signUpContent{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+
+  .signUpCard{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+}

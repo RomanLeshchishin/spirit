@@ -1,0 +1,57 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.card {
+  margin: {
+    left: 35px;
+    right: 35px;
+    top: 60px;
+  };
+  background-color: $color-brown;
+  border-radius: 32px;
+
+  .column {
+    padding: 12px 20px 35px 30px;
+
+    .nameHorse {
+      margin: 0;
+      text-align: center;
+      @extend .textFont;
+      font: {
+        size: 20px;
+        weight: 700;
+      };
+      color: $color-white;
+    }
+
+    .rowContainer {
+
+      .row {
+        display: flex;
+
+        .rowText {
+          margin: 0;
+          margin-top: 15px;
+          flex: 0 0 40%;
+          @extend .textFont;
+          font: {
+            size: 14px;
+            weight: 700;
+          };
+          color: $color-white;
+        }
+
+        .rowInf {
+          margin: 0;
+          margin-top: 17px;
+          @extend .textFont;
+          font: {
+            size: 12px;
+            weight: 500;
+          };
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

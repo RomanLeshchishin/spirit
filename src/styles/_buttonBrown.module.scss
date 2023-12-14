@@ -1,0 +1,29 @@
+@import 'textFont.module';
+
+.btnBrown{
+  @extend .textFont;
+  display: flex;
+  width: 280px;
+  height: 78px;
+  padding: 18.571px 37.142px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  background: #854621;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  font-size: 23px;
+  border: none;
+  &:active {
+    cursor: pointer;
+    background: #754621;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btnLightBrown{
+  @extend .btnBrown;
+  background: #CF8E55;
+}

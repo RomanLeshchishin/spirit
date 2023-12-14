@@ -1,0 +1,12 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.textTitle {
+  margin: 0;
+  margin-bottom: 70px;
+  @extend .textFont;
+  font: {
+    size: 60px;
+    weight: 900;
+  };
+}

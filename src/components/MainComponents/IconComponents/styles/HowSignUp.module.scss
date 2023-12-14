@@ -1,0 +1,14 @@
+@import "../../../../styles/variable";
+@import "../../../../styles/mixins";
+
+.container {
+  margin-top: 100px;
+  padding: 80px 93px 90px 46px;
+  background-color: $color-black-30;
+  border-radius: 32px;
+
+  .iconsContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+}
