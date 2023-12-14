@@ -51,3 +51,13 @@
   color: $color-white;
   border: 1px solid $color-black-30;
 }
+
+@mixin content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  gap: 20px;
+}

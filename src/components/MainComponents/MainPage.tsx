@@ -8,9 +8,9 @@ import ActiveLeisure from "../ActiveLeisureComponents/ActiveLeisure.tsx";
 import Footer from "../Footer/Footer.tsx";
 import AnswerCollapse from "../AnswerComponent/AnswerCollapse.tsx";
 import AboutUs from "../AboutUsComponent/AboutUs.tsx";
+import MenuCustom from "../MenuComponents/Menu.tsx";
 
 import styles from "./styles/MainPage.module.scss";
-import MenuCustom from "../MenuComponents/Menu.tsx";
 
 
 
@@ -19,24 +19,26 @@ function MainPage() {
         <>
             <div className={styles.container}>
                 <MenuCustom />
-                <div className={styles.content}>
+                <div className={styles.head}>
                     <Header />
-                    <PhotoSlider/>
-                    <AboutUs/>
-                    <ActiveLeisure />
-                    <OurAdvantages />
-                    <AnswerCollapse/>
-                    <SiteStatistic/>
-                    <HowSignUp />
-                    <FormCustom
-                        namePlaceholder={'Введите ваше Ф.И.О.'}
-                        phonePlaceholder={'Введите ваш телефон'}
-                        emailPlaceholder={'Введите ваше e-mail'}
-                        textAreaPlaceholder={'Введите ваш вопрос'}
-                        heightTextArea={11}
-                        buttonPlaceholder={'Записаться'}
-                    />
-                    <Footer map={true}/>
+                    <div className={styles.content}>
+                        <PhotoSlider/>
+                        <AboutUs/>
+                        <ActiveLeisure />
+                        <OurAdvantages />
+                        <AnswerCollapse/>
+                        <SiteStatistic/>
+                        <HowSignUp />
+                        <FormCustom
+                            namePlaceholder={'Введите ваше Ф.И.О.'}
+                            phonePlaceholder={'Введите ваш телефон'}
+                            emailPlaceholder={'Введите ваше e-mail'}
+                            textAreaPlaceholder={'Введите ваш вопрос'}
+                            heightTextArea={11}
+                            buttonPlaceholder={'Записаться'}
+                        />
+                        <Footer map={true}/>
+                    </div>
                 </div>
             </div>
         </>

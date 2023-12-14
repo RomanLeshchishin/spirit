@@ -1,11 +1,9 @@
 import React, {useState} from "react";
 import Comment from "./Comment.tsx";
-import Header from "../HeaderComponents/Header.tsx";
 import Modal from "../ModalComponent/Modal.tsx";
 import FormComment from "../FormComponent/FormComment.tsx";
 
 import styles from "./styles/CommentPage.module.scss";
-import '../../../public/img/avatar-1.png'
 
 const CommentPage = () => {
     const [modalActive, setModalActive] = useState(false);
@@ -23,7 +21,6 @@ const CommentPage = () => {
 
     return (
         <>
-            <Header />
             <div className={styles.containerComment}>
                 <Comment
                     src={'../../../public/img/avatar-1.png'}

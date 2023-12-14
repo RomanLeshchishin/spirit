@@ -2,13 +2,20 @@
 @import "../../../styles/mixins";
 
 .layout {
-  border-right: 1px solid #F0F0F0;
   max-height: 100%;
 
   .sider {
     position: relative;
     background-color: $color-beige;
     color: $color-beige;
+  }
+
+  .menuItem {
+    @extend .textFontColor;
+    font: {
+      weight: 700;
+      size: 16px;
+    };
   }
 }
 
@@ -18,13 +25,4 @@
 
 .logoMin {
   padding: 65px 22px 30px 22px;
-}
-
-.button {
-  width: 24px;
-  height: 24px;
-  position: absolute;
-  top: 37px;
-  right: -12px;
-  z-index: 12;
 }
