@@ -20,7 +20,19 @@ const OurHorsePage = () => {
     return (
         <>
             <div className={styles.horseCardContainer}>
-                {isSuccess && data?.map((horse) =>
+                {isSuccess && data?.slice(0, 5).map((horse) =>
+                    <HorseCard
+                        src={horse.imageUrl}
+                        alt={horse.name}
+                        name={horse.name}
+                        breed={horse.breed}
+                        suit={horse.suit}
+                        year={horse.year}
+                    />
+                )}
+            </div>
+            <div className={styles.horseCardContainer}>
+                {isSuccess && data?.slice(5, 10).map((horse) =>
                     <HorseCard
                         src={horse.imageUrl}
                         alt={horse.name}
