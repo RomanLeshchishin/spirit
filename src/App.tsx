@@ -12,6 +12,7 @@ import Login from "./components/AuthorizationComponents/Login.tsx";
 import Registration from "./components/AuthorizationComponents/Registration.tsx";
 import LayoutProtect from "./components/UI/LayoutProtect.tsx";
 import Profile from "./components/ProfileComponent/Profile.tsx";
+import PhotoGalleryPage from "./components/PhotoGalleryComponent/PhotoGalleryPage.tsx";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
                         <Route path={'comments'} element={<CommentPage />} />
                         <Route path={'horses'} element={<OurHorsePage />} />
                         <Route path={'coaches'} element={<OurCoachesPage />} />
+                        <Route path={"photoGallery"} element={<PhotoGalleryPage/>}/>
                     </Route>
                     <Route element={<LayoutProtect/>}>
                         <Route path={'signup'} element={<SignUp />} />
