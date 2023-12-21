@@ -35,14 +35,11 @@ const MenuCustom = () => {
                         mode="inline"
                     >
                         <Menu.Item className={styles.menuItem} key={'/'} icon={<HomeOutlined style={{ fontSize: '120%' }} />}><Link to="/">Главная</Link></Menu.Item>
-                        <Menu.Item className={styles.menuItem} key={'//'} icon={<ShoppingOutlined style={{ fontSize: '120%' }} />}>Услуги</Menu.Item>
-                        <Menu.Item className={styles.menuItem} key={'///'} icon={<PercentageOutlined style={{ fontSize: '120%' }} />}>Акции</Menu.Item>
                         <Menu.Item className={styles.menuItem} key={'/horses'} icon={<HeartOutlined style={{ fontSize: '120%' }} />}><Link to="/horses">Наши лошади</Link></Menu.Item>
-                        <Menu.Item className={styles.menuItem} key={'////'} icon={<TeamOutlined style={{ fontSize: '120%' }} />}>Наши тренеры</Menu.Item>
+                        <Menu.Item className={styles.menuItem} key={'/coaches'} icon={<TeamOutlined style={{ fontSize: '120%' }} />}>Наши тренеры</Menu.Item>
                         <Menu.Item className={styles.menuItem} key={'/comments'} icon={<SmileOutlined style={{ fontSize: '120%' }} />}><Link to="/comments">Отзывы</Link></Menu.Item>
-                        <Menu.Item className={styles.menuItem} key={'/////'} icon={<PhoneOutlined style={{ fontSize: '120%' }} />}>Контакты</Menu.Item>
                         <Menu.Item className={styles.menuItem} key={'/signup'} icon={<MailOutlined style={{ fontSize: '120%' }} />}><Link to="/signup">Записаться</Link></Menu.Item>
-                        <Menu.Item className={styles.menuItem} key={'//////'} icon={<PictureOutlined style={{ fontSize: '120%' }} />}>Фотогалерея</Menu.Item>
+                        <Menu.Item className={styles.menuItem} key={'/photoGallery'} icon={<PictureOutlined style={{ fontSize: '120%' }} />}><Link to="/photoGallery">Фотогалерея</Link></Menu.Item>
                     </Menu>
                 </Sider>
             </Layout>
