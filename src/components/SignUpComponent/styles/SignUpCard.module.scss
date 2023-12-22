@@ -8,5 +8,17 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+
+    .signUpField{
+      display: flex;
+      flex-direction: row;
+      gap: 5px
+    }
+
+    .buttonComponent{
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+    }
   }
 }

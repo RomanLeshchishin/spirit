@@ -8,7 +8,8 @@ type Store = {
     signUps: ISignUp[],
     setAuthUser: (user: IUser | null) => void,
     setRequestLoading: (isLoading: boolean) => void,
-    setSignUp: (signUp: ISignUp) => void
+    setSignUps: (signUps: ISignUp[]) => void,
+    updateSignUps: (signUp: ISignUp) => void
 }
 
 const useStore = create<Store>((set) => ({
@@ -21,7 +22,8 @@ const useStore = create<Store>((set) => ({
     },
     setRequestLoading: (isLoading) =>
         set((state) => ({ ...state, requestLoading: isLoading })),
-    setSignUp: (signUp) => set((state) => ({signUps: [...state.signUps, signUp]}))
+    setSignUps: (signUps) => set((state) => ({...state, signUps: signUps})),
+    updateSignUps: (signUp) => set((state) => ({signUps: [...state.signUps, signUp]}))
 }))
 
 export default useStore;

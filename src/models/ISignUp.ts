@@ -1,9 +1,10 @@
 import {IUserProfile} from "./IUser.ts";
 
 export interface ISignUp extends IUserProfile{
-    numberPeople: number,
+    _id: string,
+    number_people: number,
     service: string,
     date: string,
     time: string,
-    additionalInformation: string
+    additional_information: string
 }

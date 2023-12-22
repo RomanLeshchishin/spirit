@@ -23,8 +23,8 @@ const Registration = () => {
             const responseRegistration = await AuthService.registrationUser(user)
             console.log(responseRegistration.data.message)
             const responseLogin = await AuthService.loginUser({email: user.email, password: user.password})
-            store.setRequestLoading(false)
             store.setAuthUser(responseLogin.data.user)
+            store.setRequestLoading(false)
             navigate('/signup')
         }
         catch (error: any){

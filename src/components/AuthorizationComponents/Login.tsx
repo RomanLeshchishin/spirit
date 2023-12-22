@@ -5,6 +5,7 @@ import {useState} from "react";
 import {IUserLogin} from "../../models/IUser.ts";
 import AuthService from "../../services/authService.ts";
 import useStore from "../../store";
+import SignUpService from "../../services/signUpService.ts";
 
 const Login = () => {
     const store = useStore();
@@ -17,8 +18,10 @@ const Login = () => {
         try {
             store.setRequestLoading(true)
             const response = await AuthService.loginUser(user)
-            store.setRequestLoading(false)
             store.setAuthUser(response.data.user)
+            const responseSignUps = await SignUpService.getSignUps(response.data.user.id)
+            store.setSignUps(responseSignUps.data)
+            store.setRequestLoading(false)
             navigate('/signup')
         }
         catch (error: any){
