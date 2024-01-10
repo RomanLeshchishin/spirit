@@ -1,4 +1,3 @@
-import * as React from "react";
 import styles from "./styles/PhotoGalleryPage.module.scss"
 import Photo from "./Photo.tsx";
 import TitleSection from "../TitleComponent/TitleSection.tsx";

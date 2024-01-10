@@ -1,4 +1,3 @@
-import React from 'react';
 import TitleSection from "../../TitleComponent/TitleSection.tsx";
 import TextSection from "../../TitleComponent/TextSection.tsx";
 import {aboutUs} from "../../../../constants/const.ts";

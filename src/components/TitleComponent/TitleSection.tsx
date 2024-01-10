@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./styles/TitleSection.module.scss";
 
 interface TitleSectionProps {

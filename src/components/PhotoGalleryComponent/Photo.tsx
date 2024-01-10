@@ -1,4 +1,3 @@
-import * as React from "react";
 import styles from "./styles/Photo.module.scss"
 import {Image} from "antd";
 

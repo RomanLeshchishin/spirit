@@ -10,7 +10,8 @@ export default class AuthService {
                 surname: user.surname,
                 number: user.number,
                 email: user.email,
-                password: user.password
+                password: user.password,
+                role: "User"
             }
         )
     }

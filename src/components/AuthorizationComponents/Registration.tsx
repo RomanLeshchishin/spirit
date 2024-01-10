@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styles from "./styles/Authorizathion.module.scss";
 import {useNavigate} from "react-router";
 import {useState} from "react";

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styles from './Footer.module.scss';
 import MapComponent from "./Map/MapComponent.tsx";
 import FooterContacts from "./FooterContacts.tsx";

@@ -1,4 +1,3 @@
-import React from 'react';
 import useStore from "../../store";
 import styles from "./Profile.module.scss";
 import SignUpCards from "../SignUpComponent/SignUpCards.tsx";

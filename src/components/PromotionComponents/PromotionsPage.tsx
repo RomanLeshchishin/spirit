@@ -1,9 +1,9 @@
-import CoachCard from "./CoachCard.tsx";
-import styles from './styles/OurCouchesPage.module.scss';
+import styles from './styles/PromotionsPage.module.scss';
 import {Photo} from "../../types.ts";
 import {useQuery} from "@tanstack/react-query";
+import PromotionCard from "./PromotionCard.tsx";
 
-const OurCoachesPage = () => {
+const PromotionsPage = () => {
     async function fetchPhotos(): Promise<Photo[] | undefined>{
         const res = await fetch('https://6579af271acd268f9af9bc32.mockapi.io/coaches')
         if (!res.ok) throw new Error('Failed to fetch photos!')
@@ -18,11 +18,10 @@ const OurCoachesPage = () => {
     return (
         <div className={styles.couchCardContainer}>
             {isSuccess && data?.map((coach, number) =>
-                <CoachCard
+                <PromotionCard
                     even={(number + 1) % 2 == 0}
-                    name={coach.fullName}
+                    name={coach.name}
                     src={coach.imageUrl}
-                    education={coach.education}
                     description={coach.description}
                 />
             )}
@@ -30,4 +29,4 @@ const OurCoachesPage = () => {
     );
 };
 
-export default OurCoachesPage;
+export default PromotionsPage;

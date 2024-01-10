@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
 import useStore from "../../store";
 import {ISignUp} from "../../models/ISignUp.ts";
 import styles from "./styles/SignUpCard.module.scss";

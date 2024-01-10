@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styles from './Contact.module.scss';
 import Icon, {IconProps} from "../../UI/Icon.tsx";
 

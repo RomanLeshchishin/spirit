@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./styles/FormComment.module.scss"
 import {Form, Input} from "antd";
 const { TextArea } = Input;

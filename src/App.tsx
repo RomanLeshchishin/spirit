@@ -13,6 +13,7 @@ import Registration from "./components/AuthorizationComponents/Registration.tsx"
 import LayoutProtect from "./components/UI/LayoutProtect.tsx";
 import Profile from "./components/ProfileComponent/Profile.tsx";
 import PhotoGalleryPage from "./components/PhotoGalleryComponent/PhotoGalleryPage.tsx";
+import PromotionsPage from "./components/PromotionComponents/PromotionsPage.tsx";
 
 function App() {
   return (
@@ -24,14 +25,15 @@ function App() {
                         <Route path={'comments'} element={<CommentPage />} />
                         <Route path={'horses'} element={<OurHorsePage />} />
                         <Route path={'coaches'} element={<OurCoachesPage />} />
-                        <Route path={"photoGallery"} element={<PhotoGalleryPage/>}/>
+                        <Route path={"photoGallery"} element={<PhotoGalleryPage />} />
+                        <Route path={"promotions"} element={<PromotionsPage />} />
                     </Route>
-                    <Route element={<LayoutProtect/>}>
+                    <Route element={<LayoutProtect />}>
                         <Route path={'signup'} element={<SignUp />} />
-                        <Route path={'profile'} element={<Profile/>}/>
+                        <Route path={'profile'} element={<Profile />} />
                     </Route>
-                    <Route path={"/login"} element={<Login/>}/>
-                    <Route path={"/registration"} element={<Registration/>}/>
+                    <Route path={"/login"} element={<Login />} />
+                    <Route path={"/registration"} element={<Registration />} />
                 </Routes>
             </BrowserRouter>
         </div>

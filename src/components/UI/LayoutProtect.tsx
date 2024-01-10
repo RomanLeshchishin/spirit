@@ -1,4 +1,3 @@
-import React from 'react';
 import useStore from "../../store";
 import {Navigate, Outlet} from "react-router-dom";
 import Header from "../HeaderComponent/Header.tsx";

@@ -1,4 +1,3 @@
-import React from 'react';
 import Header from "../HeaderComponent/Header.tsx";
 import {Outlet} from "react-router-dom";
 import Footer from "../FooterComponents/Footer.tsx";

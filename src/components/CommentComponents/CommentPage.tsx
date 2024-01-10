@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import Comment from "./Comment.tsx";
 import Modal from "../ModalComponent/Modal.tsx";
 import FormComment from "../FormComponent/FormComment.tsx";

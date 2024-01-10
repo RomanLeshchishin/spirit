@@ -1,4 +1,3 @@
-import React from "react";
 import HorseCard from "./HorseCard.tsx";
 
 import styles from "./styles/OurHorsePage.module.scss"
