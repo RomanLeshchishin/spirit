@@ -6,7 +6,7 @@ type Store = {
     authUser: IUser | null,
     requestLoading: boolean,
     signUps: ISignUp[],
-    setAuthUser: (user: IUser | null) => void,
+    setAuthUser: (user: IUser | null, token: string) => void,
     setRequestLoading: (isLoading: boolean) => void,
     setSignUps: (signUps: ISignUp[]) => void,
     updateSignUps: (signUp: ISignUp) => void
@@ -16,9 +16,9 @@ const useStore = create<Store>((set) => ({
     authUser: null,
     requestLoading: false,
     signUps: [],
-    setAuthUser: (user) => {
+    setAuthUser: (user, token) => {
         set((state) =>  ({...state, authUser: user}));
-        localStorage.setItem('token', user.token)
+        localStorage.setItem('token', token)
     },
     setRequestLoading: (isLoading) =>
         set((state) => ({ ...state, requestLoading: isLoading })),

@@ -1,52 +1,88 @@
 import styles from './styles/PromotionCard.module.scss';
 import {useState} from "react";
+import {DatePicker} from "antd";
+import {dateFormat} from "../../../constants/const.ts";
+import {IPromCard, IPromCardWithId} from "../../models/IPromCard.ts";
+import * as dayjs from "dayjs";
+import {useMutation} from "@tanstack/react-query";
+import axios from "axios";
 
 export interface PromotionCardProps {
-    even?: boolean,
-    name: string,
-    src: string,
-    alt?: string,
-    description: string
+    id: number,
+    title: string,
+    description: string,
+    startDate: Date,
+    endDate: Date,
 }
-const PromotionCard = ({even, name, src, alt, description} : PromotionCardProps) => {
+const PromotionCard = ({id, title, description, startDate, endDate} : PromotionCardProps) => {
     const [mode, setMode] = useState<string>('display')
+
+    const [promCard, setPromCard] = useState<IPromCardWithId>({
+        id: id,
+        createdAt: new Date(),
+        title: title,
+        description: description,
+        startDate: startDate,
+        endDate: endDate
+    })
+
+    const editPromotionCard = useMutation({
+        mutationFn: (newPromCard: IPromCardWithId) => {
+            return axios.put(`https://659fb2505023b02bfe8a3952.mockapi.io/promotions/${newPromCard.id}`, newPromCard)
+        }
+    })
+
+    const deletePromotionCard = useMutation({
+        mutationFn: (id: number) => {
+            return axios.delete(`https://659fb2505023b02bfe8a3952.mockapi.io/promotions/${id}`)
+        }
+    })
+
     return (
         <>
-            {even ?
+            { mode == "display" ?
                 <div className={styles.cardContent}>
                     <div className={styles.cardContentText}>
-                        <div className={styles.nameText}>{name}</div>
+                        <div className={styles.nameText}>{title}</div>
                         <div className={styles.descriptionText}>{description}</div>
+                        <div className={styles.descriptionText}>{startDate && endDate != new Date("1") ? `${startDate} - ${endDate}` : "бессрочная акция"}</div>
                         <div className={styles.buttonComponent} style={{display: "flex", flexDirection: "row", gap: "15px"}}>
-                            {mode == 'edit' ?
-                                <button onClick={() => {
-                                    setMode('display');
-                                }}>сохранить
-                                </button>
-                                :
-                                <button onClick={() => setMode('edit')}>изменить</button>
-                            }
-                            <button>удалить</button>
+                            <button onClick={() => setMode('edit')}>изменить</button>
+                            <button onClick={() => deletePromotionCard.mutate(promCard.id)}>удалить</button>
                         </div>
                     </div>
-                    <img className={styles.cardContentImage} src={src} alt={alt}/>
                 </div>
                 :
                 <div className={styles.cardContent}>
-                    <img className={styles.cardContentImage} src={src} alt={alt}/>
                     <div className={styles.cardContentText}>
-                        <div className={styles.nameText}>{name}</div>
-                        <div className={styles.descriptionText}>{description}</div>
-                        <div className={styles.buttonComponent} style={{display: "flex", flexDirection: "row", gap: "15px"}}>
-                            {mode == 'edit' ?
-                                <button onClick={() => {
-                                    setMode('display');
-                                }}>сохранить
-                                </button>
-                                :
-                                <button onClick={() => setMode('edit')}>изменить</button>
-                            }
-                            <button>удалить</button>
+                        <input
+                            value={promCard.title}
+                            onChange={(e) => setPromCard({...promCard, title: e.target.value})}
+                        />
+                        <input
+                            value={promCard.description}
+                            onChange={(e) => setPromCard({...promCard, description: e.target.value})}
+                        />
+                        <div>
+                            <DatePicker
+                                placeholder={''}
+                                format={dateFormat}
+                                defaultValue={dayjs(promCard.startDate)}
+                                className={styles.input2}
+                                onChange={(date) => setPromCard({...promCard, startDate: date ? date.toDate() : new Date()})}
+                            />
+                            <DatePicker
+                                placeholder={''}
+                                format={dateFormat}
+                                defaultValue={dayjs(promCard.endDate)}
+                                className={styles.input2}
+                                onChange={(date) => setPromCard({...promCard, endDate: date ? date.toDate() : new Date()})}
+                            />
+                            <button onClick={() => {
+                                setMode('display');
+                                editPromotionCard.mutate(promCard)
+                            }}>сохранить</button>
+                            <button onClick={() => deletePromotionCard.mutate(promCard.id)}>удалить</button>
                         </div>
                     </div>
                 </div>

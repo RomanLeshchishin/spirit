@@ -17,7 +17,7 @@ const Login = () => {
         try {
             store.setRequestLoading(true)
             const response = await AuthService.loginUser(user)
-            store.setAuthUser(response.data.user)
+            store.setAuthUser(response.data.user, response.data.token)
             const responseSignUps = await SignUpService.getSignUps(response.data.user.id)
             store.setSignUps(responseSignUps.data)
             store.setRequestLoading(false)
