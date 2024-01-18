@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./styles/HorseCard.module.scss"
 
 interface HorseCardProps {

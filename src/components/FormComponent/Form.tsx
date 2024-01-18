@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import {useState} from "react";
 import styles from "./styles/Form.module.scss"
 import {DatePicker, Form, Input, Select, TimePicker} from "antd";
 import TitleSection from "../TitleComponent/TitleSection.tsx";
 import {ISignUp} from "../../models/ISignUp.ts";
 import useStore from "../../store";
-import AuthService from "../../services/authService.ts";
 import SignUpService from "../../services/signUpService.ts";
+import {dateFormat} from "../../../constants/const.ts";
 const { TextArea } = Input;
 
-const dateFormat = 'DD/MM/YYYY';
 
 interface FormProps {
     namePlaceholder: string,
@@ -31,16 +30,17 @@ const FormCustom = ( { namePlaceholder, phonePlaceholder, emailPlaceholder, text
     const store = useStore()
     const [userSignUp, setUserSignUp] = useState<ISignUp>(
         {
+            _id: '',
             userId: store.authUser?.id || '',
             name: store.authUser?.name || '',
             surname: store.authUser?.surname || '',
             number: store.authUser?.number || '',
             email: store.authUser?.email || '',
-            numberPeople: 0,
+            number_people: 0,
             service: '',
             date: '',
             time: '',
-            additionalInformation: ''
+            additional_information: ''
         }
     )
 
@@ -49,7 +49,7 @@ const FormCustom = ( { namePlaceholder, phonePlaceholder, emailPlaceholder, text
             store.setRequestLoading(true)
             const response = await SignUpService.createSignUp(userSignUp)
             store.setRequestLoading(false)
-            store.setSignUp(response.data)
+            store.updateSignUps(response.data)
             console.log(response.data)
         }
         catch (error: any){
@@ -80,7 +80,7 @@ const FormCustom = ( { namePlaceholder, phonePlaceholder, emailPlaceholder, text
                                     <Input
                                         placeholder={numPeoplePlaceholder}
                                         className={styles.input2}
-                                        onChange={(e) => setUserSignUp({...userSignUp, numberPeople: Number(e.target.value)})}/>
+                                        onChange={(e) => setUserSignUp({...userSignUp, number_people: Number(e.target.value)})}/>
                                 </Form.Item>
                                 <Form.Item>
                                     <Select
@@ -113,7 +113,7 @@ const FormCustom = ( { namePlaceholder, phonePlaceholder, emailPlaceholder, text
                                         placeholder={textAreaPlaceholder}
                                         rows={heightTextArea}
                                         className={styles.textArea2}
-                                        onChange={(e) => setUserSignUp({...userSignUp, additionalInformation: e.target.value})}
+                                        onChange={(e) => setUserSignUp({...userSignUp, additional_information: e.target.value})}
                                     />
                                 </Form.Item>
                             </div>

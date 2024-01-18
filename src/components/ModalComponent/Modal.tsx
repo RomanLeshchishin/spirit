@@ -1,4 +1,3 @@
-import React from "react";
 import {Form} from "antd";
 import Logo from "../LogoComponent/Logo.tsx";
 

@@ -1,0 +1,40 @@
+@import "../../../styles/variable";
+@import "../../../styles/mixins";
+
+.container:not(:first-child) {
+  margin-top: 104px;
+}
+
+.title {
+  padding: 0;
+  @extend .textFont;
+  font: {
+    weight: 600;
+    size: 32px;
+  };
+  color: $color-black;
+}
+
+.imageContainer {
+  margin-bottom: 51px;
+
+  .image {
+    width: 200px;
+    height: 200px;
+    margin: {
+      right: 57px;
+    };
+    border-radius: 5px;
+  }
+
+  .name {
+    padding: 0;
+    margin: 0;
+    @extend .textFont;
+    font: {
+      weight: 600;
+      size: 23px;
+    };
+    color: $color-black;
+  }
+}

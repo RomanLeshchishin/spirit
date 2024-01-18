@@ -1,9 +1,9 @@
-import React from "react";
 import HorseCard from "./HorseCard.tsx";
 
 import styles from "./styles/OurHorsePage.module.scss"
 import {Photo} from "../../types.ts";
 import {useQuery} from "@tanstack/react-query";
+import Spinner from "../AuthorizationComponents/Spinner.tsx";
 
 const OurHorsePage = () => {
     async function fetchPhotos(): Promise<Photo[] | undefined>{
@@ -12,15 +12,17 @@ const OurHorsePage = () => {
         return res.json()
     }
 
-    const {data, isSuccess} = useQuery({
+    const {data, isSuccess, isLoading, error} = useQuery({
         queryFn: fetchPhotos,
         queryKey: ['horses']
     })
 
     return (
         <>
+            {isLoading ? <Spinner/> : null}
             <div className={styles.horseCardContainer}>
-                {isSuccess && data?.slice(0, 5).map((horse) =>
+                {isSuccess ?
+                    data?.slice(0, 5).map((horse) =>
                     <HorseCard
                         src={horse.imageUrl}
                         alt={horse.name}
@@ -29,10 +31,14 @@ const OurHorsePage = () => {
                         suit={horse.suit}
                         year={horse.year}
                     />
-                )}
+                )
+                    :
+                    <div>{error?.message}</div>
+                }
             </div>
             <div className={styles.horseCardContainer}>
-                {isSuccess && data?.slice(5, 10).map((horse) =>
+                {isSuccess ?
+                    data?.slice(5, 10).map((horse) =>
                     <HorseCard
                         src={horse.imageUrl}
                         alt={horse.name}
@@ -40,8 +46,10 @@ const OurHorsePage = () => {
                         breed={horse.breed}
                         suit={horse.suit}
                         year={horse.year}
-                    />
-                )}
+                    />)
+                    :
+                    <div>{error?.message}</div>
+                }
             </div>
         </>
     );

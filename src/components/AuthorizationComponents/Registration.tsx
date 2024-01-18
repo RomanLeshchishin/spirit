@@ -1,4 +1,3 @@
-import * as React from 'react';
 import styles from "./styles/Authorizathion.module.scss";
 import {useNavigate} from "react-router";
 import {useState} from "react";
@@ -23,9 +22,9 @@ const Registration = () => {
             const responseRegistration = await AuthService.registrationUser(user)
             console.log(responseRegistration.data.message)
             const responseLogin = await AuthService.loginUser({email: user.email, password: user.password})
+            store.setAuthUser(responseLogin.data.user, responseLogin.data.token)
             store.setRequestLoading(false)
-            store.setAuthUser(responseLogin.data.user)
-            navigate('/signup')
+            navigate('/')
         }
         catch (error: any){
             store.setRequestLoading(false)

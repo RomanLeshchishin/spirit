@@ -1,24 +1,24 @@
-import React from 'react';
-import useStore from "../../store";
 import {Navigate, Outlet} from "react-router-dom";
-import Header from "../HeaderComponent/Header.tsx";
-import Footer from "../FooterComponents/Footer.tsx";
+import styles from "../MainComponents/MainPage.module.scss";
+import {Role} from "../../models/Role.ts";
+import useStore from "../../store";
 
-const LayoutProtect = () => {
-    const store = useStore()
+export interface LayoutProps{
+    role: Role
+}
+
+const LayoutProtect = ({role} : LayoutProps) => {
+    const store = useStore();
     return (
-        <div>
-            {store.authUser != null
-                ?
-                <>
-                    <Header/>
+        <>
+            {store.role == role ?
+                <div className={styles.content}>
                     <Outlet/>
-                    <Footer/>
-                </>
+                </div>
                 :
                 <Navigate to={'/registration'}/>
             }
-        </div>
+        </>
     );
 };
 

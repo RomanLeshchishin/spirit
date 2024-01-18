@@ -1,10 +1,10 @@
-import * as React from 'react';
 import styles from "./styles/Authorizathion.module.scss";
 import {useNavigate} from "react-router";
 import {useState} from "react";
 import {IUserLogin} from "../../models/IUser.ts";
 import AuthService from "../../services/authService.ts";
 import useStore from "../../store";
+import SignUpService from "../../services/signUpService.ts";
 
 const Login = () => {
     const store = useStore();
@@ -17,9 +17,11 @@ const Login = () => {
         try {
             store.setRequestLoading(true)
             const response = await AuthService.loginUser(user)
+            store.setAuthUser(response.data.user, response.data.token)
+            const responseSignUps = await SignUpService.getSignUps(response.data.user.id)
+            store.setSignUps(responseSignUps.data)
             store.setRequestLoading(false)
-            store.setAuthUser(response.data.user)
-            navigate('/signup')
+            navigate('/')
         }
         catch (error: any){
             store.setRequestLoading(false)

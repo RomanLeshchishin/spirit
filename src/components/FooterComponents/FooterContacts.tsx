@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from "./Footer.module.scss";
 import Logo from "../LogoComponent/Logo.tsx";
 import SocialMedia from "./SocialMedia/SocialMedia.tsx";
