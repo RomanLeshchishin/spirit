@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import {IPromCard} from "../../models/IPromCard.ts";
 import {dateFormat} from "../../../constants/const.ts";
 import {DatePicker} from "antd";
-import {useMutation} from "@tanstack/react-query";
+import {useMutation, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
 
 type CreatingPromotionCardProps = {
@@ -11,6 +11,7 @@ type CreatingPromotionCardProps = {
 }
 
 const CreatingPromotionCard = ({setMode} : CreatingPromotionCardProps) => {
+    const queryClient = useQueryClient();
     const [promCard, setPromCard] = useState<IPromCard>({
         createdAt: new Date(),
         title: "",
@@ -19,15 +20,12 @@ const CreatingPromotionCard = ({setMode} : CreatingPromotionCardProps) => {
         endDate: new Date()
     })
 
-    const createPromotionCard = useMutation({
+     const createPromotionCard = useMutation({
         mutationFn: (newPromCard: IPromCard) => {
             return axios.post('https://659fb2505023b02bfe8a3952.mockapi.io/promotions', newPromCard)
-        }
+        },
+        onSuccess: () => queryClient.invalidateQueries({queryKey: ["promotions"]})
     })
-
-    if(createPromotionCard.isError){
-        console.log(createPromotionCard.error.message)
-    }
 
     return (
         <>

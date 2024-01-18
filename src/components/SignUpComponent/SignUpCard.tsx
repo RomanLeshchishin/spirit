@@ -34,7 +34,7 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
             const response = await SignUpService.updateSignUp(signUp)
             if(store.signUps.find(sp => sp._id == signUp._id) != undefined){
                 const newSignUps = store.signUps
-                newSignUps[newSignUps.indexOf(newSignUps.find(sp => sp._id == signUp._id))] = signUp
+                newSignUps[newSignUps.indexOf(newSignUps.find(sp => sp._id == signUp._id) as ISignUp)] = signUp
                 store.setSignUps(newSignUps)
             }
             store.setRequestLoading(false)
@@ -67,7 +67,16 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
     }
 
     return (
-        <div style={{display: "flex", flexDirection: "column", gap: "15px", backgroundColor: "#E0D0C7", padding: "10px", borderRadius: "10px"}}>
+        <div style={
+            {
+                display: "flex",
+                flexDirection: "column",
+                gap: "15px",
+                backgroundColor: "#E0D0C7",
+                padding: "10px",
+                borderRadius: "10px"
+            }
+        }>
             { mode == 'edit' ?
             <div className={styles.signUpCard}>
                 <div className={styles.signUpField}>
@@ -77,7 +86,10 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
                         onChange={(e) => setUserUpdatedSignUp(
                             {
                                 ...userUpdatedSignUp,
-                                number_people: signUp.number_people == Number(e.target.value) ? signUp.number_people : Number(e.target.value)
+                                number_people: signUp.number_people == Number(e.target.value) ?
+                                    signUp.number_people
+                                    :
+                                    Number(e.target.value)
                             }
                         )}
                     />
@@ -131,7 +143,10 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
                         onChange={(e) => setUserUpdatedSignUp(
                             {
                                 ...userUpdatedSignUp,
-                                additional_information: signUp.additional_information == e.target.value ? signUp.additional_information : e.target.value
+                                additional_information: signUp.additional_information == e.target.value ?
+                                    signUp.additional_information
+                                    :
+                                    e.target.value
                             }
                         )}
                     />
@@ -161,18 +176,48 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
                 </div>
             </div>
             }
-            <div className={styles.buttonComponent} style={{display: "flex", flexDirection: "row", gap: "15px"}}>
+            <div className={styles.buttonComponent} style={
+                {
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "15px"
+                }
+            }>
                 {mode == 'edit' ?
                     <button onClick={() => {
                         setMode('display');
-                        console.log(userUpdatedSignUp);
                         updateSignUp(userUpdatedSignUp)
-                    }}>сохранить
+                    }}
+                            className={styles.btnBrown}
+                            style={{
+                                width: "75px",
+                                height: "30px",
+                                fontSize: "12px"
+                            }}
+                    >
+                        сохранить
                     </button>
                     :
-                    <button onClick={() => setMode('edit')}>изменить</button>
+                    <button onClick={() => setMode('edit')}
+                            className={styles.btnBrown}
+                            style={{
+                                width: "75px",
+                                height: "30px",
+                                fontSize: "12px"
+                            }}
+                    >
+                        изменить
+                    </button>
                 }
-                <button onClick={() => deleteSignUp(userUpdatedSignUp._id)}>удалить</button>
+                <button onClick={() => deleteSignUp(userUpdatedSignUp._id)}
+                        className={styles.btnBrown}
+                        style={{
+                            width: "75px",
+                            height: "30px",
+                            fontSize: "12px"
+                        }}
+                >
+                    удалить</button>
             </div>
         </div>
     );

@@ -2,10 +2,11 @@ import styles from './styles/PromotionCard.module.scss';
 import {useState} from "react";
 import {DatePicker} from "antd";
 import {dateFormat} from "../../../constants/const.ts";
-import {IPromCard, IPromCardWithId} from "../../models/IPromCard.ts";
+import {IPromCardWithId} from "../../models/IPromCard.ts";
 import * as dayjs from "dayjs";
-import {useMutation} from "@tanstack/react-query";
+import {useMutation, useQueryClient} from "@tanstack/react-query";
 import axios from "axios";
+import Spinner from "../AuthorizationComponents/Spinner.tsx";
 
 export interface PromotionCardProps {
     id: number,
@@ -14,9 +15,9 @@ export interface PromotionCardProps {
     startDate: Date,
     endDate: Date,
 }
-const PromotionCard = ({id, title, description, startDate, endDate} : PromotionCardProps) => {
+const PromotionCardAdmin = ({id, title, description, startDate, endDate} : PromotionCardProps) => {
     const [mode, setMode] = useState<string>('display')
-
+    const queryClient = useQueryClient();
     const [promCard, setPromCard] = useState<IPromCardWithId>({
         id: id,
         createdAt: new Date(),
@@ -29,13 +30,15 @@ const PromotionCard = ({id, title, description, startDate, endDate} : PromotionC
     const editPromotionCard = useMutation({
         mutationFn: (newPromCard: IPromCardWithId) => {
             return axios.put(`https://659fb2505023b02bfe8a3952.mockapi.io/promotions/${newPromCard.id}`, newPromCard)
-        }
+        },
+        onSuccess: () => queryClient.invalidateQueries({queryKey: ["promotions"]})
     })
 
     const deletePromotionCard = useMutation({
         mutationFn: (id: number) => {
             return axios.delete(`https://659fb2505023b02bfe8a3952.mockapi.io/promotions/${id}`)
-        }
+        },
+        onSuccess: () => queryClient.invalidateQueries({queryKey: ["promotions"]})
     })
 
     return (
@@ -43,6 +46,7 @@ const PromotionCard = ({id, title, description, startDate, endDate} : PromotionC
             { mode == "display" ?
                 <div className={styles.cardContent}>
                     <div className={styles.cardContentText}>
+                        {queryClient.isMutating() ? <Spinner/> : null}
                         <div className={styles.nameText}>{title}</div>
                         <div className={styles.descriptionText}>{description}</div>
                         <div className={styles.descriptionText}>{startDate && endDate != new Date("1") ? `${startDate} - ${endDate}` : "бессрочная акция"}</div>
@@ -91,4 +95,4 @@ const PromotionCard = ({id, title, description, startDate, endDate} : PromotionC
     );
 };
 
-export default PromotionCard;
+export default PromotionCardAdmin;

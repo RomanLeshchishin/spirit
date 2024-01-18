@@ -21,7 +21,7 @@ const Login = () => {
             const responseSignUps = await SignUpService.getSignUps(response.data.user.id)
             store.setSignUps(responseSignUps.data)
             store.setRequestLoading(false)
-            navigate('/signup')
+            navigate('/')
         }
         catch (error: any){
             store.setRequestLoading(false)
