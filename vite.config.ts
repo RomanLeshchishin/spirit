@@ -7,6 +7,10 @@ export default defineConfig({
 		watch: {
 			usePolling: true
 		},
+		hmr: {
+			overlay: true,
+			clientPort: process.env.PORT || 5173
+		},
 		host: true,
 		strictPort: true,
 		port: process.env.PORT || 5173
