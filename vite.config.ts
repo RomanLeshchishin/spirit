@@ -9,7 +9,6 @@ export default defineConfig({
 		port: 8080,
 		hmr: {
 			overlay: true,
-			protocol: ws,
 			clientPort: 8080
 		}
 	}
