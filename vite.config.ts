@@ -7,11 +7,7 @@ export default defineConfig({
 		watch: {
 			usePolling: true
 		},
-		hmr: {
-			overlay: false
-		},
 		host: true,
-		strictPort: true,
-		port: 3000
+		strictPort: true
 	}
 })
