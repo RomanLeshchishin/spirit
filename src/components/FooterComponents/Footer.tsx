@@ -1,5 +1,4 @@
 import styles from './Footer.module.scss';
-import MapComponent from "./Map/MapComponent.tsx";
 import FooterContacts from "./FooterContacts.tsx";
 
 export interface Footer{
@@ -13,7 +12,6 @@ const Footer = ({map} : Footer) => {
             map
             ?
             <div className={styles.footer}>
-                <MapComponent/>
                 <FooterContacts/>
             </div>
             :
