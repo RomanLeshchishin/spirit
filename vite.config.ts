@@ -8,6 +8,7 @@ export default defineConfig({
 			usePolling: true
 		},
 		host: true,
-		strictPort: true
+		strictPort: true,
+		port: process.env.PORT || 5173
 	}
 })
