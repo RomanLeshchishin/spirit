@@ -1,21 +1,21 @@
 import styles from './styles/PromotionsPage.module.scss';
-import {IPromotion} from "../../types.ts";
 import {useQuery, useQueryClient} from "@tanstack/react-query";
 import PromotionCardAdmin from "./PromotionCardAdmin.tsx";
 import {useState} from "react";
 import CreatingPromotionCard from "./creatingPromotionCard.tsx";
 import Spinner from "../AuthorizationComponents/Spinner.tsx";
+import {IPromCardWithId} from "../../models/IPromCard.ts";
 
 const PromotionsAdminPage = () => {
     const queryClient = useQueryClient();
-    async function fetchPhotos(): Promise<IPromotion[] | undefined>{
+    async function fetchPromotions(): Promise<IPromCardWithId[] | undefined>{
         const res = await fetch('https://659fb2505023b02bfe8a3952.mockapi.io/promotions')
         if (!res.ok) throw new Error('Failed to fetch photos!')
         return res.json()
     }
 
     const {data, isSuccess, isLoading, error} = useQuery({
-        queryFn: fetchPhotos,
+        queryFn: fetchPromotions,
         queryKey: ['promotions']
     })
 
