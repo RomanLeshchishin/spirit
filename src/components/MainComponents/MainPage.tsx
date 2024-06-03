@@ -1,6 +1,5 @@
 import Header from "../HeaderComponent/Header.tsx";
 import PhotoSlider from "./PhotoSlider/PhotoSlider.tsx";
-import SiteStatistic from "./SiteStatisticComponent/SiteStatistic.tsx";
 import OurAdvantages from "./IconComponents/OurAdvantages.tsx";
 import HowSignUp from "./IconComponents/HowSignUp.tsx";
 import FormCustom from "../FormComponent/Form.tsx";
@@ -27,7 +26,6 @@ function MainPage() {
                         <ActiveLeisure />
                         <OurAdvantages />
                         <AnswerCollapse/>
-                        <SiteStatistic/>
                         <HowSignUp />
                         <FormCustom
                             namePlaceholder={'Введите ваше Ф.И.О.'}

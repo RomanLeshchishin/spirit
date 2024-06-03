@@ -98,14 +98,14 @@ const FormCustom = ( { namePlaceholder, phonePlaceholder, emailPlaceholder, text
                                         placeholder={datePickerPlaceholder}
                                         format={dateFormat}
                                         className={styles.input2}
-                                        onChange={(date) => setUserSignUp({...userSignUp, date: date.toString()})}
+                                        onChange={(date) => setUserSignUp({...userSignUp, date: date?.toString() || ''})}
                                     />
                                 </Form.Item>
                                 <Form.Item>
                                     <TimePicker
                                         placeholder={timePickerPlaceholder}
                                         className={styles.input2}
-                                        onChange={(time) => setUserSignUp({...userSignUp, time: time.toString()})}
+                                        onChange={(time) => setUserSignUp({...userSignUp, time: time?.toString() || ''})}
                                     />
                                 </Form.Item>
                                 <Form.Item>

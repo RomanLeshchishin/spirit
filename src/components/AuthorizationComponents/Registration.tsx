@@ -20,7 +20,7 @@ const Registration = () => {
         try {
             store.setRequestLoading(true)
             const responseRegistration = await AuthService.registrationUser(user)
-            console.log(responseRegistration.data.message)
+            console.log(responseRegistration.data)
             const responseLogin = await AuthService.loginUser({email: user.email, password: user.password})
             store.setAuthUser(responseLogin.data.user, responseLogin.data.token)
             store.setRequestLoading(false)

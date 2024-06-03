@@ -1,4 +1,4 @@
-import {IUserLogin, IUserRegistration} from "../models/IUser.ts";
+import {IUserLogin, IUserLoginFromServer, IUserRegistration} from "../models/IUser.ts";
 import {authApi} from "../api/authApi.ts";
 import {AxiosResponse} from "axios";
 
@@ -16,8 +16,8 @@ export default class AuthService {
         )
     }
 
-    static async loginUser(user: IUserLogin):Promise<AxiosResponse<IUserLogin>>{
-        return authApi.post<IUserRegistration>("/auth/login",
+    static async loginUser(user: IUserLogin):Promise<AxiosResponse<IUserLoginFromServer>>{
+        return authApi.post<IUserLoginFromServer>("/auth/login",
             {
                 email: user.email,
                 password: user.password

@@ -1,5 +1,3 @@
-import React from "react";
-
 import styles from "./styles/ActiveLeisure.module.scss"
 import ActiveLeisureCard from "./ActiveLeisureCard.tsx";
 import TitleSection from "../../TitleComponent/TitleSection.tsx";

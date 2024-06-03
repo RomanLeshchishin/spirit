@@ -1,11 +1,11 @@
 import styles from './styles/PromotionsPage.module.scss';
-import {Photo} from "../../types.ts";
+import {IPromotion} from "../../types.ts";
 import {useQuery} from "@tanstack/react-query";
 import PromotionCardUser from "./PromotionCardUser.tsx";
 import Spinner from "../AuthorizationComponents/Spinner.tsx";
 
 const PromotionsUserPage = () => {
-    async function fetchPhotos(): Promise<Photo[] | undefined>{
+    async function fetchPhotos(): Promise<IPromotion[] | undefined>{
         const res = await fetch('https://659fb2505023b02bfe8a3952.mockapi.io/promotions')
         if (!res.ok) throw new Error('Failed to fetch photos!')
         return res.json()

@@ -1,4 +1,5 @@
 import styles from "./styles/PhotoGalleryPage.module.scss"
+import {IPhoto} from "./../../types.ts";
 import Photo from "./Photo.tsx";
 import TitleSection from "../TitleComponent/TitleSection.tsx";
 import {useQuery} from "@tanstack/react-query";
@@ -7,7 +8,7 @@ import {useState} from "react";
 import Spinner from "../AuthorizationComponents/Spinner.tsx";
 
 const PhotoGalleryPage = () => {
-    async function fetchPhotos(): Promise<Photo[] | undefined>{
+    async function fetchPhotos(): Promise<IPhoto[] | undefined>{
         const res = await fetch('https://658437734d1ee97c6bcf4104.mockapi.io/walkPhoto')
         if (!res.ok) throw new Error('Failed to fetch photos!')
         return res.json()

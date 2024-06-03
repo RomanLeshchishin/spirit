@@ -65,7 +65,7 @@ const HorseSvg = () => (
 );
 
 export const HorseIcon = (props: Partial<CustomIconComponentProps>) => (
-    <Icon component={HorseSvg} {...props} />
+    <Icon component={HorseSvg} {...props} onPointerLeaveCapture onPointerEnterCapture/>
 );
 
 

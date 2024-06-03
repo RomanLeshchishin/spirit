@@ -1,5 +1,4 @@
 import {Form} from "antd";
-import Logo from "../LogoComponent/Logo.tsx";
 
 interface ModalProps {
     active: boolean,
@@ -21,7 +20,6 @@ const Modal = ({ active, setActive, textBtn1, textBtn2, onClick1, onClick2, layo
                     <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
                         <Form className={styles.modalForm}>
                             <div className={styles.headerContainer}>
-                                <Logo width={154} height={50} />
                                 <p className={styles.title}>Добавление отзыва</p>
                             </div>
                             <Form.Item className={styles.modelContent}>

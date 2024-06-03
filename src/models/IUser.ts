@@ -27,3 +27,8 @@ export interface IUserProfile{
     number: string,
     email: string
 }
+
+export interface IUserLoginFromServer{
+	user: IUser,
+	token: string
+}

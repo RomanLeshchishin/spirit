@@ -118,7 +118,7 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
                         onChange={(date) => setUserUpdatedSignUp(
                             {
                                 ...userUpdatedSignUp,
-                                date: signUp.date == date.toString() ? signUp.date : date.toString()
+                                date: signUp.date == date?.toString() ? signUp.date : date?.toString() || ''
                             }
                         )}
                     />
@@ -131,7 +131,7 @@ const SignUpCard = ({signUp} : SignUpCardProps) => {
                         onChange={(time) => setUserUpdatedSignUp(
                             {
                                 ...userUpdatedSignUp,
-                                time: signUp.time == time.toString() ? signUp.time : time.toString()
+                                time: signUp.time == time?.toString() ? signUp.time : time?.toString() || ''
                             }
                         )}
                     />

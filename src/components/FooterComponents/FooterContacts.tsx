@@ -17,24 +17,24 @@ const FooterContacts = () => {
                 <Contact contactLabel={"Телефон:"} contactText={"+7-950-632-87-85"}
                          icon={{
                              classBlockIcon: styles.blockIcon,
-                             element: <PhoneOutlined className={styles.contactIcon}/>
+                             element: <PhoneOutlined className={styles.contactIcon} onPointerEnterCapture onPointerLeaveCapture/>
                          }}/>
                 <Contact contactLabel={"E-mail:"} contactText={"nikitina.ma2003@gmail.com"}
                          icon={{
                              classBlockIcon: styles.blockIcon,
-                             element: <MailOutlined className={styles.contactIcon}/>
+                             element: <MailOutlined className={styles.contactIcon} onPointerEnterCapture onPointerLeaveCapture/>
                          }}/>
             </div>
             <div className={styles.contactsBlockRow}>
                 <Contact contactLabel={"Адрес:"} contactText={"г. Екатеринбург, ул. Ползунова, 56"}
                          icon={{
                              classBlockIcon: styles.blockIcon,
-                             element: <EnvironmentOutlined className={styles.contactIcon}/>
+                             element: <EnvironmentOutlined className={styles.contactIcon} onPointerEnterCapture onPointerLeaveCapture/>
                          }}/>
                 <Contact contactLabel={"Режим работы:"} contactText={"Пн: Выходной Вт-Вс: с 10:00-20:00"}
                          icon={{
                              classBlockIcon: styles.blockIcon,
-                             element: <FieldTimeOutlined className={styles.contactIcon}/>
+                             element: <FieldTimeOutlined className={styles.contactIcon} onPointerEnterCapture onPointerLeaveCapture/>
                          }}/>
             </div>
         </div>

@@ -1,4 +1,3 @@
-import * as React from 'react';
 import instagram from '../../../../public/img/instagram.svg';
 import vk from '../../../../public/img/vk.png';
 import tikTok from '../../../../public/img/tikTok.png';

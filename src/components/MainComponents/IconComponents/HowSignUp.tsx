@@ -1,4 +1,3 @@
-import React from "react";
 import TitleSection from "../../TitleComponent/TitleSection.tsx";
 import InformationIcons from "../InformationIconsComponent/InformationIcons.tsx";
 import { PhoneOutlined, FieldTimeOutlined, SkinOutlined } from "@ant-design/icons";
