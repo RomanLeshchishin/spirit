@@ -33,7 +33,7 @@ function MainPage() {
                             emailPlaceholder={'Введите ваше e-mail'}
                             textAreaPlaceholder={'Введите ваш вопрос'}
                             heightTextArea={11}
-                            buttonPlaceholder={'Записаться'}
+                            buttonPlaceholder={'Задать вопрос'}
                         />
                         <Footer map={true}/>
                     </div>

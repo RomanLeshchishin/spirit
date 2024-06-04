@@ -16,9 +16,9 @@ const Header = () => {
                         </a>
                         <p className={styles.text}>Записаться по телефону: +7-950-632-87-85</p>
                         {store.authUser ?
-                            <div style={{display: "flex", flexDirection: "row", gap: "10px"}}>
+                            <div style={{display: "flex", flexDirection: "row", gap: "20px"}}>
                                 <a
-                                    className={styles.textForgot}
+                                    className={styles.textRegist}
                                     onClick={(e) => {
                                         navigate("/profile");
                                         e.preventDefault()
@@ -27,7 +27,7 @@ const Header = () => {
                                     Профиль
                                 </a>
                                 <a
-                                    className={styles.textForgot}
+                                    className={styles.textRegist}
                                     onClick={(e) => {
                                         store.logOut;
                                         navigate("/login");
@@ -38,9 +38,9 @@ const Header = () => {
                                 </a>
                             </div>
                             :
-                            <div style={{display: "flex", flexDirection: "row", gap: "10px"}}>
+                            <div style={{display: "flex", flexDirection: "row", gap: "20px"}}>
                                 <a
-                                    className={styles.textForgot}
+                                    className={styles.textRegist}
                                     onClick={(e) => {
                                         navigate("/login");
                                         e.preventDefault()
@@ -49,7 +49,7 @@ const Header = () => {
                                     Войти
                                 </a>
                                 <a
-                                    className={styles.textForgot}
+                                    className={styles.textRegist}
                                     onClick={(e) => {
                                         navigate("/registration");
                                         e.preventDefault()}}

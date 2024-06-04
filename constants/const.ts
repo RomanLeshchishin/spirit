@@ -65,7 +65,7 @@ export const dateFormat = 'DD/MM/YYYY';
 
 export const photoSliderList: photoSlide[] = [
     {
-        src: '../public/img/slider-1.svg',
+        src: 'https://storage.yandexcloud.net/spirit-36589/slider-1.svg',
         heading: 'Конный клуб “Spirit”',
         description: 'Добро пожаловать в КК “Spirit”! Лучшее место, ' +
             'чтобы насладиться природой и получить невероятные эмоции ' +
@@ -73,21 +73,21 @@ export const photoSliderList: photoSlide[] = [
         buttonText: 'Записаться'
     },
     {
-        src: '../public/img/slider-2.svg',
+        src: 'https://storage.yandexcloud.net/spirit-36589/slider-2.svg',
         heading: 'Активный отдых для всех!',
         description: 'Верховая езда, тренировки, конные прогулки, группы ' +
             'снятия стресса, праздники и многое другое в нашем клубе.',
         buttonText: 'Подробнее'
     },
     {
-        src: '../public/img/slider-3.svg',
+        src: 'https://storage.yandexcloud.net/spirit-36589/slider-3.svg',
         heading: 'Для детей',
         description: 'На базе КК «Spirit» действует детско-юношеская школа ' +
             'верховой езды для детей от 8 до 14 лет, а также пони-клуб для детей до 8 лет.',
         buttonText: 'Записаться'
     },
     {
-        src: '../public/img/slider-4.svg',
+        src: 'https://storage.yandexcloud.net/spirit-36589/slider-4.svg',
         heading: 'Для лошадей',
         description: 'Уютный клуб с опытными теренрами. Просторные денники, конная ' +
             'тропа по Калиновскому лесопарку, удобная инфраструктура, ежедневный выгул, ' +
@@ -95,7 +95,7 @@ export const photoSliderList: photoSlide[] = [
         buttonText: 'Узнать больше'
     },
     {
-        src: '../public/img/slider-5.svg',
+        src: 'https://storage.yandexcloud.net/spirit-36589/slider-5.svg',
         heading: 'Экскурсии',
         description: 'Двухчасовые экскурсии по конюшне для детей и взрослых. ' +
             'Обучающие курсы для детей «Теория и практика верховой езды».',

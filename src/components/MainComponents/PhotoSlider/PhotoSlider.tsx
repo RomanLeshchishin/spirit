@@ -16,7 +16,6 @@ const PhotoSlider: React.FC = () => {
                                 <div className={styles.textHeading}>{photoSlide.heading}</div>
                                 <div className={styles.textDescription}>{photoSlide.description}</div>
                             </div>
-                            <button className={styles.btnBrown}>{photoSlide.buttonText}</button>
                         </div>
                     </div>
                     )

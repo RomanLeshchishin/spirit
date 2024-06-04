@@ -29,7 +29,7 @@ const MenuCustom = () => {
                     <div className={styles.logo}>
                         <Logo width={203} height={70} type={'based'} />
                     </div>
-                    { store.role == Role.User ?
+                    { store.role == Role.User || Role.NoAuth ?
                     <Menu
                         mode="inline"
                     >

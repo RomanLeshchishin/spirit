@@ -18,6 +18,15 @@
         weight: 900;
       };
     }
+
+    .textRegist {
+      @extend .text;
+      font: {
+        size: 20px;
+        weight: 600;
+      };
+      text-decoration: none;
+    }
   }
 
   .headerContainer {
